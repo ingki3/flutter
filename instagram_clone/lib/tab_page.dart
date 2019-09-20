@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'home_page.dart';
+import 'account_page.dart';
 
 class TabPage extends StatefulWidget {
   @override
@@ -11,7 +12,7 @@ class _TabPageState extends State<TabPage> {
   List _pages = [
     HomePage(),
     Text('page2'),
-    Text('page3')];
+    AccountPage()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
