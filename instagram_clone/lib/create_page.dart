@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart'
+import 'package:flutter/material.dart';
 
 class CreatePage extends StatefulWidget {
   @override
@@ -6,10 +6,47 @@ class CreatePage extends StatefulWidget {
 }
 
 class _CreatePageState extends State<CreatePage> {
+  final textEditingController = TextEditingController();
+
+  @override
+  void dispose() {
+    textEditingController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Scaffold(
+      appBar: _buildAppBar(),
+      body: _buildBody(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add_a_photo),
+      ),
     );
   }
+
+  Widget _buildAppBar() {
+    return AppBar(
+      actions: <Widget>[
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.send),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildBody() {
+    return Column(
+      children: <Widget>[
+        Text('no Image'),
+        TextField(
+          controller: textEditingController,
+          decoration: InputDecoration(hintText: '내용을 입력하세요.'),
+        )
+      ],
+    );
+  }      
+
 }
