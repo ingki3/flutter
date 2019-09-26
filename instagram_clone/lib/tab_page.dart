@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/search_page.dart';
 import 'home_page.dart';
 import 'account_page.dart';
 
@@ -11,7 +12,7 @@ class _TabPageState extends State<TabPage> {
   int _selectedIndex = 0;
   List _pages = [
     HomePage(),
-    Text('page2'),
+    SearchPage(),
     AccountPage()];
   @override
   Widget build(BuildContext context) {
