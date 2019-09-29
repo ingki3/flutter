@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class CreatePage extends StatefulWidget {
   @override
@@ -7,6 +10,8 @@ class CreatePage extends StatefulWidget {
 
 class _CreatePageState extends State<CreatePage> {
   final textEditingController = TextEditingController();
+
+  File _image;
 
   @override
   void dispose() {
@@ -20,7 +25,9 @@ class _CreatePageState extends State<CreatePage> {
       appBar: _buildAppBar(),
       body: _buildBody(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          _getImage();
+        },
         child: Icon(Icons.add_a_photo),
       ),
     );
@@ -38,14 +45,26 @@ class _CreatePageState extends State<CreatePage> {
   }
 
   Widget _buildBody() {
-    return Column(
-      children: <Widget>[
-        Text('no Image'),
-        TextField(
-          controller: textEditingController,
-          decoration: InputDecoration(hintText: '내용을 입력하세요.'),
-        )
-      ],
+    return SingleChildScrollView(
+          child: Column(
+        children: <Widget>[
+          _image == null ? Text('no Image') : Image.file(_image),
+//          Text('no Image'),
+          TextField(
+            controller: textEditingController,
+            decoration: InputDecoration(hintText: '내용을 입력하세요.'),
+          )
+        ],
+      ),
+    );
+  }
+
+  Future _getImage() async{
+    File image = await ImagePicker.pickImage(source: ImageSource.camera);
+    print(image.path);
+    setState(() {
+        _image = image;
+      }
     );
   }      
 

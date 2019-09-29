@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'tab_page.dart';
+//import 'package:instagram_clone/login_page.dart';
+import 'package:instagram_clone/tab_page.dart';
+//import 'tab_page.dart';
 
 class RootPage extends StatelessWidget {
   @override
