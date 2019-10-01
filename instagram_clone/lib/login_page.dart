@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:instagram_clone/tab_page.dart';
+//import 'package:instagram_clone/tab_page.dart';
 
 class LoginPage extends StatelessWidget {
   final GoogleSignIn _googleSignIn = GoogleSignIn();
@@ -29,8 +29,6 @@ class LoginPage extends StatelessWidget {
               onPressed: () {
                 _handleSignIn().then((user){
                   print("signed in " + user.displayName);
-                  Navigator.push(context, 
-                    MaterialPageRoute(builder: (context)=> TabPage(user)));
                 });
               },
             ),
