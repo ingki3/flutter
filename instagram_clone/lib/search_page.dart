@@ -12,17 +12,16 @@ class _SearchPageState extends State<SearchPage> {
     return Scaffold(
       appBar: AppBar(),
       body: _buildBidy(),
-            floatingActionButton: FloatingActionButton(onPressed: () {
+      floatingActionButton: FloatingActionButton(onPressed: () {
               Navigator.push(context, 
                 MaterialPageRoute(builder:  (context) => CreatePage())
               );
-            },
-              child: Icon(Icons.create),
-              backgroundColor: Colors.blue,
-            ),
-            
-          );
-        }
+      },
+      child: Icon(Icons.create),
+      backgroundColor: Colors.blue,
+      ),
+    );
+  }
       
   Widget _buildBidy() {
     return GridView.builder(
@@ -44,5 +43,4 @@ class _SearchPageState extends State<SearchPage> {
       fit: BoxFit.cover
     );
   }
-
 }
