@@ -30,7 +30,7 @@ class LoginPage extends StatelessWidget {
               onPressed: () {
                 _handleSignIn().then((user){
                   print("signed in " + user.displayName);
-                  Navigator.pushReplacement(context, 
+                  Navigator.push(context, 
                     MaterialPageRoute(builder: (context)=> TabPage(user)));
                 });
               },
