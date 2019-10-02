@@ -23,7 +23,7 @@ class _TabPageState extends State<TabPage> {
 
     this._pages = [
       HomePage(widget.user),
-      SearchPage(),
+      SearchPage(widget.user),
       AccountPage(widget.user)
     ];
   }
