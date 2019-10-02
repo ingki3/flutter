@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/create_page.dart';
+import 'package:instagram_clone/detail_post_page.dart';
 
 class SearchPage extends StatefulWidget {
   final FirebaseUser user;
@@ -53,9 +54,17 @@ class _SearchPageState extends State<SearchPage> {
     );
   }
   Widget _buildListItem( context, document) {
-    return Image.network(
+    return InkWell(
+      onTap: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context){
+          return DetailPostPage(document);
+        }));
+        
+      },
+      child: Image.network(
       document["photoUrl"],
       fit: BoxFit.cover
+      ),
     );
   }
 }
