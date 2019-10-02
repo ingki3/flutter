@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/create_page.dart';
@@ -28,22 +29,32 @@ class _SearchPageState extends State<SearchPage> {
   }
       
   Widget _buildBidy() {
-    return GridView.builder(
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 3,
-        childAspectRatio: 1.0,
-        mainAxisSpacing: 1.0,
-        crossAxisSpacing: 1.0,
-      ),
-      itemCount: 5,
-      itemBuilder: (context, index) {
-        return _buildListItem(context, index);
+    return StreamBuilder(
+      stream: Firestore.instance.collection('post').snapshots(),
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        if(!snapshot.hasData){
+          return Center(child: CircularProgressIndicator());
+        }
+        var items = snapshot.data?.documents ?? [];
+
+        return GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            childAspectRatio: 1.0,
+            mainAxisSpacing: 1.0,
+            crossAxisSpacing: 1.0,
+          ),
+          itemCount: items.length,
+          itemBuilder: (context, index) {
+            return _buildListItem(context, items[index]);
+          },
+        );
       },
     );
   }
-  Widget _buildListItem(BuildContext context, int index) {
+  Widget _buildListItem( context, document) {
     return Image.network(
-      'https://a.espncdn.com/i/teamlogos/mlb/500/lad.png',
+      document["photoUrl"],
       fit: BoxFit.cover
     );
   }
