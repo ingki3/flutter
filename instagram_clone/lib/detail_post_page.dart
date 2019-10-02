@@ -16,6 +16,8 @@ class DetailPostPage extends StatelessWidget {
   }
       
   Widget _buildBody() {
+    print("Mark1");
+    print(document==null);
     return SafeArea(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,7 +41,10 @@ class DetailPostPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                Image.network(document['photoUrl']),
+                Hero(
+                  tag: document['photoUrl'],
+                  child: Image.network(document['photoUrl'])
+                  ),
                 Padding(
                   padding:  const EdgeInsets.all(8.0),
                   child: Text(document['contents']),

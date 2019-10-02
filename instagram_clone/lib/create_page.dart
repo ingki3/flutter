@@ -57,7 +57,8 @@ class _CreatePageState extends State<CreatePage> {
                   'photoUrl':uri.toString(),
                   'contents': textEditingController.text,
                   'email': widget.user.email,
-                  'displayName': widget.user.photoUrl,
+                  'displayName': widget.user.displayName,
+                  'userPhotoUrl': widget.user.photoUrl
                 }).then((onValue) {
                   Navigator.pop(context);
                 });
