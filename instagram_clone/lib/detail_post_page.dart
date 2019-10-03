@@ -1,56 +1,61 @@
 import 'package:flutter/material.dart';
 
-class DetailPostPage extends StatelessWidget {
+class DetailPostPage extends StatefulWidget {
   final dynamic document;
 
-  DetailPostPage(this.document);
+  DetailPostPage({Key key, this.document}) : super(key: key);
 
+  @override
+  _DetailPostPageState createState() => _DetailPostPageState();
+}
+
+class _DetailPostPageState extends State<DetailPostPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('둘러보기'),
       ),
-      body: _buildBody(),        
+      body: _buildBody(),
     );
   }
-      
+
   Widget _buildBody() {
-    print("Mark1");
-    print(document==null);
-    return SafeArea(
+    return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: Row(
               children: <Widget>[
                 CircleAvatar(
-                  backgroundImage: NetworkImage(document['userPhotoUrl']),
+                  backgroundImage: NetworkImage(
+                      widget.document['userPhotoUrl']),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 8.0),
+                  padding: const EdgeInsets.only(left: 8.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text(document['email'], style: TextStyle(fontWeight: FontWeight.bold),
+                      Text(
+                        widget.document['email'],
+                        style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      Text(document['displayName']
-                      ),
+                      Text(widget.document['displayName']),
                     ],
                   ),
-                ),
-                Hero(
-                  tag: document['photoUrl'],
-                  child: Image.network(document['photoUrl'])
-                  ),
-                Padding(
-                  padding:  const EdgeInsets.all(8.0),
-                  child: Text(document['contents']),
-                ),
+                )
               ],
             ),
+          ),
+          Hero(
+            tag: widget.document['photoUrl'],
+            child: Image.network(widget.document['photoUrl']),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(widget.document['contents']),
           ),
         ],
       ),

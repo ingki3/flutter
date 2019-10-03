@@ -60,7 +60,7 @@ class _SearchPageState extends State<SearchPage> {
         child: InkWell(
           onTap: (){
             Navigator.push(context, MaterialPageRoute(builder: (context){
-              return DetailPostPage(document);
+              return DetailPostPage(document:document);
             }));
           },
           child: Image.network(
