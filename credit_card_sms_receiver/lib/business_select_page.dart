@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
 class BusinessSelectPage extends StatefulWidget {
+  final double latitude;
+  final double longitude;
+  final String business;
+
+  BusinessSelectPage(this.latitude, this.longitude, this.business);
+
   @override
   _BusinessSelectPageState createState() => _BusinessSelectPageState();
 }

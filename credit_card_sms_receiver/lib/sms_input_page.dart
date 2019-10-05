@@ -1,6 +1,10 @@
+import 'dart:convert';
+
 import 'package:credit_card_sms_receiver/business_select_page.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:http/http.dart' as http;
 
 class SmsInputPage extends StatefulWidget {
   @override
@@ -11,7 +15,7 @@ class _SmsInputPageState extends State<SmsInputPage> {
   final _controller = TextEditingController();
 
   Map<String, double> userLocation;
-
+  List<Marker> markers = <Marker>[];
 
   @override
   void initState() {
@@ -93,14 +97,22 @@ class _SmsInputPageState extends State<SmsInputPage> {
               onPressed: () {
                 print(_parseString());
 
+                double latitude;
+                double longitude;
                 setState(() {
                   _getPosition().then((position){
                     print(position.latitude);
                     print(position.longitude);
+                    latitude = position.latitude;
+                    longitude = position.longitude;
+                    _searchNearby(position.latitude, position.longitude, '재연비타민');
                   });
                 });
+
+                
+
                 Navigator.push(context, 
-                  MaterialPageRoute(builder:  (context) => BusinessSelectPage())
+                  MaterialPageRoute(builder:  (context) => BusinessSelectPage(latitude, longitude, "재연비타민"))
                 );
               },
             ),
@@ -154,5 +166,22 @@ class _SmsInputPageState extends State<SmsInputPage> {
   Future _getPosition() async{
     Position position = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
     return position;
+  }
+
+// 1
+  Future _searchNearby(double latitude, double longitude, String business) async {
+
+    String url =
+        'https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyC9kSjaT9qIaGcNBrQifVb-TRmr64VeBtU&location=$latitude,$longitude&radius=10000&keyword=$business';
+    print(url);
+
+    final response = await http.get(url);
+
+    if (response.statusCode == 200) {
+      print(json.decode(response.body));
+      return json.decode(response.body);
+    } else {
+      throw Exception('An error occurred getting places nearby');
+    }
   }
 }
