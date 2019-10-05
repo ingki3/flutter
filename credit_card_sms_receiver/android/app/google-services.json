@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "333598235531",
+    "firebase_url": "https://cardsms-beb11.firebaseio.com",
+    "project_id": "cardsms-beb11",
+    "storage_bucket": "cardsms-beb11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333598235531:android:93434d31e0616bb0aced8e",
+        "android_client_info": {
+          "package_name": "com.example.credit_card_sms_receiver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333598235531-p0bubp64b1lu2hdsi0hha3r2immlfjlt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.credit_card_sms_receiver",
+            "certificate_hash": "31c94deec06d5ac0141004f68a23268b8812004c"
+          }
+        },
+        {
+          "client_id": "333598235531-3evgmd84hfaiemkbomapb1mqgsino6bl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9kSjaT9qIaGcNBrQifVb-TRmr64VeBtU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333598235531-3evgmd84hfaiemkbomapb1mqgsino6bl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

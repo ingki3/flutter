@@ -17,7 +17,7 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: _buildBidy(),
+      body: _buildBody(),
       floatingActionButton: FloatingActionButton(onPressed: () {
               Navigator.push(context, 
                 MaterialPageRoute(builder:  (context) => CreatePage(widget.user))
@@ -29,7 +29,7 @@ class _SearchPageState extends State<SearchPage> {
     );
   }
       
-  Widget _buildBidy() {
+  Widget _buildBody() {
     return StreamBuilder(
       stream: Firestore.instance.collection('post').snapshots(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
