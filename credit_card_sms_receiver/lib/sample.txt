@@ -19,3 +19,5 @@ Google map key: AIzaSyC9kSjaT9qIaGcNBrQifVb-TRmr64VeBtU
 https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=37.399665,127.096&key=AIzaSyC9kSjaT9qIaGcNBrQifVb-TRmr64VeBtU&radius=10000&keyword=uniclo
 
 https://www.raywenderlich.com/4466319-google-maps-for-flutter-tutorial-getting-started
+
+https://www.youtube.com/watch?v=vl_AaCgudcY&list=PLjxrf2q8roU2HdJQDjJzOeO6J3FoFLWr2&index=14
