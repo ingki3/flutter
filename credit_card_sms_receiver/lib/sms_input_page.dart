@@ -1,7 +1,13 @@
-import 'package:credit_card_sms_receiver/business_select_page.dart';
+//import 'package:credit_card_sms_receiver/business_select_page.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:credit_card_sms_receiver/search_result.dart';
+import 'package:credit_card_sms_receiver/business_result.dart';
+
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+
 
 class SmsInputPage extends StatefulWidget {
   @override
@@ -92,21 +98,16 @@ class _SmsInputPageState extends State<SmsInputPage> {
               child: Text('Input SMS', style: TextStyle(color: Colors.white),),
               color: Colors.blue,
               onPressed: () {
-                print(_parseString());
+                Map<String, String> parseResult = _parseString();
+                print("Business Name : ${parseResult["business"]}");
 
-                double latitude;
-                double longitude;
                 setState(() {
                   _getPosition().then((position){
-                    print("##############");
-                    print(position.latitude);
-                    print(position.longitude);
-                    latitude = position.latitude;
-                    longitude = position.longitude;
+                    print(position.toString());
 
-                    Navigator.push(context, 
-                      MaterialPageRoute(builder:  (context) => BusinessSelectPage(latitude, longitude, "재연비타민"))
-                    );
+//                    Navigator.push(context, 
+//                      MaterialPageRoute(builder:  (context) => BusinessSelectPage(position.latitude, position.longitude, parseResult["business"]))
+//                    );
                   });
                 });
               },
@@ -122,11 +123,11 @@ class _SmsInputPageState extends State<SmsInputPage> {
       ),
     );
   }
-  String _parseString() {
+  Map<String, String> _parseString() {
     return _parseBCCard(_controller.text);
   }
 
-  String _parseBCCard(String str) {
+  Map<String, String> _parseBCCard(String str) {
     List<String> splitedStr = str.split('\n');
     for(var n in splitedStr) {
       print(n);
@@ -143,9 +144,7 @@ class _SmsInputPageState extends State<SmsInputPage> {
     print("$month/$day $hour:$minute");
     String business = splitedStr[5];
 
-    return (
-      '''
-        {
+    Map<String, String> map = {
           "cardName" : "$cardName",
           "Spending" : "$spending",
           "month" : "$month",
@@ -153,13 +152,45 @@ class _SmsInputPageState extends State<SmsInputPage> {
           "hour" : "$hour",
           "minute" : "$minute",
           "business" : "$business"
-        }
-      '''
-    );
+    };
+    print("Business : ${map["business"]}");
+      
+
+    return map;
   }
 
+  Future _getPosition() async {
+    Map<String, String> parsedList = _parseString();
+    Position position = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+
+    String url =
+        '''https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyC9kSjaT9qIaGcNBrQifVb-TRmr64VeBtU&location=${position.latitude},${position.longitude}&radius=1000&keyword=${parsedList["business"]}''';
+    print(url);
+
+    final response = await http.get(url);
+
+    if (response.statusCode == 200) {
+      print("Mark 2-1 ***************************");
+      var itemList = json.decode(response.body);
+
+      List<BusinessResult> resultList = List();
+
+      for(var item in itemList["results"]){
+        resultList.add(BusinessResult.fromJson(item));
+      }
+
+      return SearchResult(parsedList["business"], position.latitude, position.longitude, resultList);
+
+
+    }
+    else{
+      return null;
+    }
+  }
+/*
   Future _getPosition() async{
     Position position = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
     return position;
   }
+*/
 }
