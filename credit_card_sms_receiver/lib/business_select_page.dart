@@ -41,35 +41,64 @@ class _BusinessSelectPageState extends State<BusinessSelectPage> {
     print(url);
 
     final response = await http.get(url);
+    print("Status code : ${response.statusCode}");
 
     if (response.statusCode == 200) {
+      print("Mark 2-1 ***************************");
       this.itemList = json.decode(response.body);
+      print("Mark 2-2 ***************************");
       this.safeArea = SafeArea(
-        child: ListView.builder(
-          itemBuilder: (BuildContext ctxt, int Index){
-            print("Mark 44 ***************************");
-            print(itemList[index]["name"]);
-            return Card(
-              child:  ListTile(
+        child: ListView(
+          children: <Widget>[
+            Card(
+              child: ListTile(
                 leading: Icon(Icons.map),
-                title:itemList[index]["name"]),
-            );
-          },
-          itemCount: itemList.length,
+                title: Text(itemList[0])
+              ),
+            ),
+          ],
         ),
       );
+      print("Item Count : ${itemList.length}");
       print("Mark 22 ***************************");
     } else {
       throw Exception('An error occurred getting places nearby');
     }
-
-
   }
 }
 
 
 
 /*
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: FutureBuilder<List<Photo>>(
+        future: fetchPhotos(http.Client()),
+        builder: (context, snapshot) {
+          if (snapshot.hasError) print(snapshot.error);
+
+          return snapshot.hasData
+              ? PhotosList(photos: snapshot.data)
+              : Center(child: CircularProgressIndicator());
+        },
+      ),
+    );
+  }
+
+
+
+
+
+              Card(
+                child:  ListTile(
+                  leading: Icon(Icons.map),
+                  title:itemList[0]["name"]),
+              ),
+
+
       child: ListView(
         children: <Widget>[
           Card(
