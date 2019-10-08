@@ -164,7 +164,7 @@ class _SmsInputPageState extends State<SmsInputPage> {
     Position position = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
 
     String url =
-        '''https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyC9kSjaT9qIaGcNBrQifVb-TRmr64VeBtU&location=${position.latitude},${position.longitude}&radius=300&keyword=${parsedList["business"]}&language=kr''';
+        '''https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyC9kSjaT9qIaGcNBrQifVb-TRmr64VeBtU&location=${position.latitude},${position.longitude}&radius=1000&keyword=${parsedList["business"]}&language=kr''';
     print(url);
 
     final response = await http.get(url);
