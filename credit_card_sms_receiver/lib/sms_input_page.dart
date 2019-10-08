@@ -1,4 +1,4 @@
-//import 'package:credit_card_sms_receiver/business_select_page.dart';
+import 'package:credit_card_sms_receiver/business_select_page.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -105,9 +105,9 @@ class _SmsInputPageState extends State<SmsInputPage> {
                   _getPosition().then((position){
                     print(position.toString());
 
-//                    Navigator.push(context, 
-//                      MaterialPageRoute(builder:  (context) => BusinessSelectPage(position.latitude, position.longitude, parseResult["business"]))
-//                    );
+                    Navigator.push(context, 
+                      MaterialPageRoute(builder:  (context) => BusinessSelectPage(position))
+                    );
                   });
                 });
               },
@@ -164,7 +164,7 @@ class _SmsInputPageState extends State<SmsInputPage> {
     Position position = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
 
     String url =
-        '''https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyC9kSjaT9qIaGcNBrQifVb-TRmr64VeBtU&location=${position.latitude},${position.longitude}&radius=1000&keyword=${parsedList["business"]}''';
+        '''https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyC9kSjaT9qIaGcNBrQifVb-TRmr64VeBtU&location=${position.latitude},${position.longitude}&radius=300&keyword=${parsedList["business"]}''';
     print(url);
 
     final response = await http.get(url);
@@ -177,6 +177,8 @@ class _SmsInputPageState extends State<SmsInputPage> {
 
       for(var item in itemList["results"]){
         resultList.add(BusinessResult.fromJson(item));
+        print(item["name"]);
+        print(item["vicinity"]);
       }
 
       return SearchResult(parsedList["business"], position.latitude, position.longitude, resultList);
@@ -187,10 +189,4 @@ class _SmsInputPageState extends State<SmsInputPage> {
       return null;
     }
   }
-/*
-  Future _getPosition() async{
-    Position position = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
-    return position;
-  }
-*/
 }
