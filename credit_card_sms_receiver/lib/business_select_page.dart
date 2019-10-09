@@ -32,29 +32,30 @@ List<BusinessResult> _data;
     );
   }
 
-Widget _buildPanel() {
-  return ExpansionPanelList(
-    expansionCallback: (int index, bool isExpanded) {
-      setState(() {
-        _data[index].isExpanded = !isExpanded;
-      });
-    },
-    children: _data.map<ExpansionPanel>((BusinessResult item) {
-      return ExpansionPanel(
-        headerBuilder: (BuildContext context, bool isExpanded) {
-          return ListTile(
-            title: Text(item.name),
-          );
-        },
-        body: ListTile(
-          title: Text(item.address),
-          subtitle: Text('To delete this panel, tap the trash can icon'),
-          trailing: Icon(Icons.delete),
-          onTap: () {
-          }
-        ),
-        isExpanded: item.isExpanded,
-      );
-    }).toList(),
-  );
+  Widget _buildPanel() {
+    return ExpansionPanelList(
+      expansionCallback: (int index, bool isExpanded) {
+        setState(() {
+          _data[index].isExpanded = !isExpanded;
+        });
+      },
+      children: _data.map<ExpansionPanel>((BusinessResult item) {
+        return ExpansionPanel(
+          headerBuilder: (BuildContext context, bool isExpanded) {
+            return ListTile(
+              title: Text(item.name),
+            );
+          },
+          body: ListTile(
+            title: Text(item.address),
+            subtitle: Text('To delete this panel, tap the trash can icon'),
+            trailing: Icon(Icons.delete),
+            onTap: () {
+            }
+          ),
+          isExpanded: item.isExpanded,
+        );
+      }).toList(),
+    );
+  }
 }
