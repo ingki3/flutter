@@ -46,12 +46,18 @@ List<BusinessResult> _data;
               title: Text(item.name),
             );
           },
-          body: ListTile(
-            title: Text(item.address),
-            subtitle: Text('To delete this panel, tap the trash can icon'),
-            trailing: Icon(Icons.delete),
-            onTap: () {
-            }
+          body: Container(
+            child: Column(
+              children: <Widget>[
+                ListTile(
+                  title: Text(item.address),
+                  subtitle: Text('To delete this panel, tap the trash can icon'),
+                  trailing: Icon(Icons.map),
+                  onTap: () {
+                  }
+                ),
+              ],
+            ),
           ),
           isExpanded: item.isExpanded,
         );
@@ -59,3 +65,5 @@ List<BusinessResult> _data;
     );
   }
 }
+
+
