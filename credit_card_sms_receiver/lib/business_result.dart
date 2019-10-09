@@ -4,8 +4,9 @@ class BusinessResult {
   String address;
   double latitude;
   double longitude;
+  bool isExpanded = false;
 
-  BusinessResult({this.id, this.name, this.address, this.latitude, this.longitude});
+  BusinessResult({this.id, this.name, this.address, this.latitude, this.longitude, this.isExpanded});
 
   factory BusinessResult.fromJson(Map<String, dynamic> json) {
     return BusinessResult(
@@ -14,6 +15,7 @@ class BusinessResult {
       address: json["vicinity"],
       latitude: json["geometry"]["location"]["lat"],
       longitude: json["geometry"]["location"]["lng"],
+      isExpanded: false,
     );
 
   }
