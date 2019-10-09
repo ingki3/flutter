@@ -10,6 +10,9 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="credit_card_sms_receiver"
         android:icon="@mipmap/ic_launcher">
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyC9kSjaT9qIaGcNBrQifVb-TRmr64VeBtU"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -25,9 +28,6 @@
             <meta-data
                 android:name="io.flutter.app.android.SplashScreenUntilFirstFrame"
                 android:value="true" />
-            <meta-data
-                android:name="com.google.android.geo.API_KEY"
-               android:value="AIzaSyC9kSjaT9qIaGcNBrQifVb-TRmr64VeBtU"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -36,4 +36,5 @@
     </application>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    
 </manifest>

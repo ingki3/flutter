@@ -5,6 +5,7 @@ class BusinessResult {
   double latitude;
   double longitude;
   bool isExpanded = false;
+  double rating = 0.0;
 
   BusinessResult({this.id, this.name, this.address, this.latitude, this.longitude, this.isExpanded});
 
