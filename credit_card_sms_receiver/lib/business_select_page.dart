@@ -1,7 +1,10 @@
+import 'dart:async';
+
 import 'package:credit_card_sms_receiver/business_result.dart';
 import 'package:credit_card_sms_receiver/map_page.dart';
 import 'package:credit_card_sms_receiver/search_result.dart';
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
@@ -18,6 +21,8 @@ class BusinessSelectPage extends StatefulWidget {
 class _BusinessSelectPageState extends State<BusinessSelectPage> {
 
 List<BusinessResult> _data;
+
+//Completer<GoogleMapController> _controller = Completer();
 
   @override
   void initState() {
@@ -63,6 +68,20 @@ List<BusinessResult> _data;
           body: Container(
             child: Column(
               children: <Widget>[
+                Container(
+                  height: 350,
+                  child: GoogleMap(
+                    mapType: MapType.normal,
+                    initialCameraPosition: CameraPosition(
+                      target: LatLng(item.latitude, item.longitude),
+                      zoom: 16.0
+                    ),
+                    markers: _getMarkers(item),
+                    onMapCreated: (GoogleMapController controller) {
+                    Completer().complete(controller);
+                    },
+                  ),
+                ),
                 ListTile(
                   title: Text(item.address),
                   subtitle: Text('To delete this panel, tap the trash can icon'),
@@ -123,6 +142,26 @@ List<BusinessResult> _data;
         );
       }).toList(),
     );
+  }
+  
+  Set<Marker> _getMarkers(BusinessResult item) {
+    Set<Marker> result = Set();
+
+    result.add(
+      Marker(
+        markerId: MarkerId(item.id),
+        position: LatLng(item.latitude, item.longitude),
+        infoWindow: InfoWindow(
+          title: item.name,
+          snippet: item.address,
+        ),
+        icon: BitmapDescriptor.defaultMarker,
+      )
+    );
+
+    print("Name : ${item.name}");
+    print("Latitude : ${item.latitude}, Longitude : ${item.longitude}");
+    return result;
   }
 }
 

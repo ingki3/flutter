@@ -29,14 +29,22 @@ class _MapPageState extends State<MapPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: GoogleMap(
-          mapType: MapType.normal,
-          initialCameraPosition: position,
-          markers: _getMarkers(),
-          onMapCreated: (GoogleMapController controller) {
-            _controller.complete(controller);
-          },
+      body: SafeArea(
+        child: Column(
+          children: <Widget>[
+            Container(
+              height: 350,
+              child: GoogleMap(
+                mapType: MapType.normal,
+                initialCameraPosition: position,
+                markers: _getMarkers(),
+                onMapCreated: (GoogleMapController controller) {
+                 _controller.complete(controller);
+                },
+              ),
+            ),
+            Text("Hi, there?"),
+          ],
         ),
       ),
     );
