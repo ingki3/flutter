@@ -176,6 +176,7 @@ class _SmsInputPageState extends State<SmsInputPage> {
       List<BusinessResult> resultList = List();
 
       for(var item in itemList["results"]){
+//        print(item);
         resultList.add(BusinessResult.fromJson(item));
         print(item["name"]);
         print(item["vicinity"]);

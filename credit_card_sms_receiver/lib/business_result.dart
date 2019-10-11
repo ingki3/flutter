@@ -10,6 +10,7 @@ class BusinessResult {
   BusinessResult({this.id, this.name, this.address, this.latitude, this.longitude, this.isExpanded});
 
   factory BusinessResult.fromJson(Map<String, dynamic> json) {
+//    print("Latitude : ${json["geometry"]["location"]["lat"]}, Longitude : ${json["geometry"]["location"]["lng"]}");
     return BusinessResult(
       id: json["id"],
       name: json["name"],
