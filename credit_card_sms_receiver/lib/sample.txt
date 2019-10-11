@@ -22,3 +22,16 @@ https://www.raywenderlich.com/4466319-google-maps-for-flutter-tutorial-getting-s
 
 https://www.youtube.com/watch?v=vl_AaCgudcY&list=PLjxrf2q8roU2HdJQDjJzOeO6J3FoFLWr2&index=14
 
+https://pub.dev/packages/android_alarm_manager
+https://pub.dev/packages/background_fetch
+
+
+Kakao
+네이티브 앱 키
+b3f3e4dc582841680ec673fe217a2915
+REST API 키
+2d4468fa3144f1709c3a9bf3cc2f155a
+JavaScript 키
+c8824b6e9013774fb79b43e1f209d80a
+Admin 키
+6177d94368b88597a9e9777dc2fa8db4
