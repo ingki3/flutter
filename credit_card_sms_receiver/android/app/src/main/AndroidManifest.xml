@@ -9,7 +9,6 @@
          FlutterApplication and put your custom class here. -->
     <application
         tools:replace="android:label"
-        android:name=".Application"
         android:name="io.flutter.app.FlutterApplication"
         android:label="credit_card_sms_receiver"
         android:icon="@mipmap/ic_launcher">
