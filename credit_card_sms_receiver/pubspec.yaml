@@ -29,6 +29,7 @@ dependencies:
   smooth_star_rating: ^1.0.3
   background_fetch: '^0.2.0'
   shared_preferences: ^0.5.3+4
+  sms: ^0.2.0
 
   location: ^2.3.5
 

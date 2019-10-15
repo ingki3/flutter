@@ -10,11 +10,13 @@
          
          android:name="io.flutter.app.FlutterApplication"
          -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <application
         tools:replace="android:label"
         android:name=".Application"
         android:label="credit_card_sms_receiver"
         android:icon="@mipmap/ic_launcher">
+        <service android:name=".MyService" android:exported="true" android:enabled="true"/>
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
                android:value="AIzaSyC9kSjaT9qIaGcNBrQifVb-TRmr64VeBtU"/>
