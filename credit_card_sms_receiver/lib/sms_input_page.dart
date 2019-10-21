@@ -28,7 +28,7 @@ class _SmsInputPageState extends State<SmsInputPage> {
     _controller.addListener((){
       final text = _controller.text;
       _controller.value = _controller.value.copyWith(
-        text: widget.text,
+        text: text,
         selection: TextSelection(
             baseOffset: text.length,
             extentOffset: text.length

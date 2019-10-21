@@ -23,6 +23,7 @@ public class MainActivity extends FlutterActivity {
         new MethodChannel(getFlutterView(), "com.example.credit_card_sms_receiver").setMethodCallHandler(new MethodChannel.MethodCallHandler() {
             @Override
             public void onMethodCall(MethodCall call, MethodChannel.Result result) {
+                System.out.println("MainActivity:onMethodCall");
                 if(call.method.equals("startService")) {
                     startService();
                     result.success("service started");
@@ -39,9 +40,11 @@ public class MainActivity extends FlutterActivity {
 
     private void startService() {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            System.out.println("MainActivity:startService");
             startForegroundService(forService);
         }
         else {
+            System.out.println("MainActivity:startService");
             startService(forService);
         }
     }
