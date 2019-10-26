@@ -55,6 +55,8 @@ class _SmsInputPageState extends State<SmsInputPage> {
   Widget _buildBody() {
     return SafeArea(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Container(
             color: Colors.brown,
@@ -64,7 +66,8 @@ class _SmsInputPageState extends State<SmsInputPage> {
           ),
           Container(
             color: Colors.cyan,
-            child: Text('Input SMS Mesaage',
+            alignment: Alignment.center,
+            child: Text('Input SMS Message',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -80,12 +83,7 @@ class _SmsInputPageState extends State<SmsInputPage> {
           Expanded(
             child: Container(
               color: Colors.blueGrey,
-              child: TextField(
-                keyboardType: TextInputType.multiline,
-                maxLines: null,
-                controller: _controller,
-                decoration: InputDecoration(border: OutlineInputBorder()),
-              ),
+              child: Text(widget.text),
             ),
           ),
           Container(
@@ -193,3 +191,18 @@ class _SmsInputPageState extends State<SmsInputPage> {
     }
   }
 }
+
+
+/*
+
+          Expanded(
+            child: Container(
+              color: Colors.blueGrey,
+              child: TextField(
+                keyboardType: TextInputType.multiline,
+                maxLines: null,
+                controller: _controller,
+                decoration: InputDecoration(border: OutlineInputBorder()),
+              ),
+            ),
+          ),*/
