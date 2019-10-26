@@ -174,7 +174,7 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
-  showNotification() async {
+  void showNotification() async {
     var android = new AndroidNotificationDetails(
         'channel id', 'channel NAME', 'CHANNEL DESCRIPTION',
         priority: Priority.High,importance: Importance.Max
