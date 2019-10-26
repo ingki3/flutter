@@ -1,8 +1,9 @@
+import 'package:credit_card_sms_receiver/main_loading.dart';
+import 'package:credit_card_sms_receiver/root_page.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 
 import 'package:flutter/services.dart';
-import 'package:credit_card_sms_receiver/sms_input_page.dart';
 
 import 'package:sms/sms.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -59,7 +60,7 @@ class _MyAppState extends State<MyApp> {
     debugPrint("payload : $payload");
     await Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => SmsInputPage(payload)));
+        MaterialPageRoute(builder: (context) => LoadingPage(payload)));
   }
 
   @override
@@ -72,11 +73,11 @@ class _MyAppState extends State<MyApp> {
         primaryColor: Colors.white,
         accentColor: Colors.black,
       ),
-      home: SmsInputPage(""),
+      home: RootPage(),
     );
   }
 
-  showNotification(SmsMessage msg) async {
+  void showNotification(SmsMessage msg) async {
     var android = new AndroidNotificationDetails(
         'channel id', 'channel NAME', 'CHANNEL DESCRIPTION',
         priority: Priority.High,importance: Importance.Max
