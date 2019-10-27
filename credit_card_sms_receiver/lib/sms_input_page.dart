@@ -182,7 +182,7 @@ class _SmsInputPageState extends State<SmsInputPage> {
         print(item["vicinity"]);
       }
 
-      return SearchResult(parsedList["business"], position.latitude, position.longitude, resultList);
+      return SearchResult(parsedList, position.latitude, position.longitude, resultList);
 
 
     }

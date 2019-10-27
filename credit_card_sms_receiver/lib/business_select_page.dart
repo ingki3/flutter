@@ -1,8 +1,10 @@
 import 'dart:async';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:credit_card_sms_receiver/business_result.dart';
 import 'package:credit_card_sms_receiver/map_page.dart';
 import 'package:credit_card_sms_receiver/search_result.dart';
+import 'package:credit_card_sms_receiver/user_status.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -116,21 +118,25 @@ List<BusinessResult> _data;
                       child: Text("Rating!!", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
                       textColor: Colors.blue,
                       onPressed: (){
-                          showDialog(
-                            context: context,
-                            builder: (BuildContext context) {
-                              return AlertDialog(
-                                title: Text("Title"),
-                                content: Text("Content"),
-                                actions: <Widget>[
-                                  FlatButton(
-                                    child: Text("Confirm", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
-                                    onPressed: (){},
-                                  ),
-                                ],
-                              );
-                            }
-                          );
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: Text("Title"),
+                              content: Text("Content"),
+                              actions: <Widget>[
+                                FlatButton(
+                                  child: Text("Confirm", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                                  onPressed: (){
+                                    _rate(item).then((onValue){
+                                      
+                                    });
+                                  },
+                                ),
+                              ],
+                            );
+                          }
+                        );
                       }
                     ),
                   ],
@@ -144,6 +150,20 @@ List<BusinessResult> _data;
     );
   }
   
+  Future _rate(BusinessResult item) async {
+    var doc = Firestore.instance.collection('post').document();
+    await doc.setData({
+      'id':item.id,
+      'userId':userStatus.uid,
+      'userEmail': userStatus.email,
+      'userDisplayName': userStatus.displayName,
+      'name':item.name,
+      'address': item.address,
+      'latitude': item.latitude,
+      'longitude': item.longitude,
+    });
+  }
+
   Set<Marker> _getMarkers(BusinessResult item) {
     Set<Marker> result = Set();
 

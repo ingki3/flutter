@@ -81,12 +81,13 @@ class _LoadingPageState extends State<LoadingPage> {
 
     Map<String, String> map = {
           "cardName" : "$cardName",
-          "Spending" : "$spending",
+          "spending" : "$spending",
+          "business" : "$business",
           "month" : "$month",
           "day" : "$day",
           "hour" : "$hour",
           "minute" : "$minute",
-          "business" : "$business"
+          "year" : "$DateTime.now().year",
     };
     print("Business : ${map["business"]}");
       
@@ -116,7 +117,7 @@ class _LoadingPageState extends State<LoadingPage> {
         print(item["vicinity"]);
       }
 
-      return SearchResult(parsedList["business"], position.latitude, position.longitude, resultList);
+      return SearchResult(parsedList, position.latitude, position.longitude, resultList);
 
 
     }

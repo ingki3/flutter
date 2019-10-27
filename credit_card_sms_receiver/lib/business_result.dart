@@ -19,6 +19,5 @@ class BusinessResult {
       longitude: json["geometry"]["location"]["lng"],
       isExpanded: false,
     );
-
   }
 }

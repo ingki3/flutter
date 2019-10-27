@@ -1,3 +1,4 @@
+import 'package:credit_card_sms_receiver/user_status.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
@@ -27,6 +28,7 @@ class SignIn extends StatelessWidget {
               Buttons.Google,
               onPressed: () {
                 _handleSignIn().then((user){
+                  userStatus = user;
                   print("signed in " + user.displayName);
                 });
               },
