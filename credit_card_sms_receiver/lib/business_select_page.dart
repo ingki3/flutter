@@ -129,7 +129,7 @@ List<BusinessResult> _data;
                                   child: Text("Confirm", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
                                   onPressed: (){
                                     _rate(item).then((onValue){
-                                      
+                                      Navigator.of(context).pop();
                                     });
                                   },
                                 ),
@@ -161,6 +161,13 @@ List<BusinessResult> _data;
       'address': item.address,
       'latitude': item.latitude,
       'longitude': item.longitude,
+      'year': widget.result.msgMap["year"],
+      'month': widget.result.msgMap["month"],
+      'day': widget.result.msgMap["day"],
+      'hour': widget.result.msgMap["hour"],
+      'minute': widget.result.msgMap["minute"],
+      'currentTime': DateTime.now(),
+      'rating' : item.rating
     });
   }
 

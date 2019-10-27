@@ -1,5 +1,5 @@
+import 'package:credit_card_sms_receiver/history_page.dart';
 import 'package:credit_card_sms_receiver/sign_in.dart';
-import 'package:credit_card_sms_receiver/sms_input_page.dart';
 import 'package:credit_card_sms_receiver/user_status.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -12,10 +12,12 @@ class RootPage extends StatelessWidget {
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         print(snapshot.hasData);
         if(snapshot.hasData) {
+          print("Go to the HistoryPage");
           userStatus = snapshot.data;
-          return SmsInputPage("");
+          return HitoryPage();
         }
         else {
+          print("Go to the SignInPage");
           return SignIn();
         }
       },
