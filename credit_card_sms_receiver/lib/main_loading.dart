@@ -27,7 +27,6 @@ class _LoadingPageState extends State<LoadingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -35,7 +34,9 @@ class _LoadingPageState extends State<LoadingPage> {
           Padding(padding: EdgeInsets.all(80)),
           Expanded(
             child: Container(
-              child: Text("Loading"),
+              color: Colors.brown,
+              alignment: Alignment.center,
+              child: Text("Loading", style: TextStyle(fontSize: 36, fontWeight:FontWeight.bold),),
             ),
           ),
           Padding(padding: EdgeInsets.all(80)),

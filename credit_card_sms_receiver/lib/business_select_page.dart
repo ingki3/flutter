@@ -2,7 +2,9 @@ import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:credit_card_sms_receiver/business_result.dart';
+import 'package:credit_card_sms_receiver/history_page.dart';
 import 'package:credit_card_sms_receiver/map_page.dart';
+import 'package:credit_card_sms_receiver/preference_button.dart';
 import 'package:credit_card_sms_receiver/search_result.dart';
 import 'package:credit_card_sms_receiver/user_status.dart';
 import 'package:flutter/material.dart';
@@ -71,7 +73,7 @@ List<BusinessResult> _data;
             child: Column(
               children: <Widget>[
                 Container(
-                  height: 350,
+                  height: 200,
                   child: GoogleMap(
                     mapType: MapType.normal,
                     initialCameraPosition: CameraPosition(
@@ -90,6 +92,15 @@ List<BusinessResult> _data;
                   trailing: Icon(Icons.map),
                   onTap: () {
                   }
+                ),
+                Container(
+                  child: Row(
+                    children: <Widget>[
+                      PreferenceButton("어쩌고"
+  
+                      ),
+                    ],
+                  ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -130,6 +141,9 @@ List<BusinessResult> _data;
                                   onPressed: (){
                                     _rate(item).then((onValue){
                                       Navigator.of(context).pop();
+                                      Navigator.push(context, 
+                                        MaterialPageRoute(builder:  (context) => HitoryPage())
+                                      );
                                     });
                                   },
                                 ),
@@ -191,5 +205,3 @@ List<BusinessResult> _data;
     return result;
   }
 }
-
-
