@@ -65,7 +65,11 @@
 **/ios/ServiceDefinitions.json
 **/ios/Runner/GeneratedPluginRegistrant.*
 
+<<<<<<< HEAD
 **/app/google-service.json
+=======
+**/app/google-services.json
+>>>>>>> 13d23a6b34e79370d56301c7f3b94c8064b20867
 
 # Exceptions to above rules.
 !**/ios/**/default.mode1v3
