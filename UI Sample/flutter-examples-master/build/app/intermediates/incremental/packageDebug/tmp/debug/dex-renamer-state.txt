@@ -1,0 +1,4 @@
+#Tue Nov 05 09:40:57 KST 2019
+base.0=/Users/a407867/DevProjects/UI Sample/flutter-examples-master/build/app/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

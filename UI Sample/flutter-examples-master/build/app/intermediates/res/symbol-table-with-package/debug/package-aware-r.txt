@@ -1,0 +1,7 @@
+com.syncfusion.flutter_examples
+drawable launch_background
+drawable splash_screen_land
+mipmap ic_launcher
+mipmap launch_image
+mipmap launch_image_land
+style LaunchTheme
