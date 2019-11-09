@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/a407867/DevProjects/UI Sample/flutter-examples-master/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "/Users/mac/dev_project/VisualStudioCode/UI Sample/flutter-examples-master/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/a407867/DevProjects/UI Sample/flutter-examples-master/android/app/src/main/res/values-land/styles.xml",
+                    "source": "/Users/mac/dev_project/VisualStudioCode/UI Sample/flutter-examples-master/android/app/src/main/res/values-land/styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "0",

@@ -65,33 +65,35 @@ class _LiveUpdateState extends State<VerticalLineLiveUpdate> {
   @override
   Widget build(BuildContext context) {
     return ScopedModelDescendant<SampleListModel>(
-        builder: (BuildContext context, _, SampleListModel model) => SafeArea(
-              child: Backdrop(
-                needCloseButton: false,
-                panelVisible: frontPanelVisible,
-                sampleListModel: model,
-                frontPanelOpenPercentage: 0.28,
-                toggleFrontLayer: false,
-                appBarAnimatedLeadingMenuIcon: AnimatedIcons.close_menu,
-                appBarActions: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
-                    child: Container(
-                      height: 40,
-                      width: 40,
-                      child: IconButton(
-                        icon:
-                            Image.asset('images/code.png', color: Colors.white),
-                        onPressed: () {
-                          launch(
-                              'https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/dynamic_updates/live_update/vertical_live_chart.dart');
-                        },
-                      ),
-                    ),
-                  ),
-                ],
-                appBarTitle: AnimatedSwitcher(
-                    duration: Duration(milliseconds: 1000),
+        builder: (BuildContext context, _, SampleListModel model) {
+          const Duration duration2 = Duration(milliseconds: 1000);
+                    return SafeArea(
+                        child: Backdrop(
+                          needCloseButton: false,
+                          panelVisible: frontPanelVisible,
+                          sampleListModel: model,
+                          frontPanelOpenPercentage: 0.28,
+                          toggleFrontLayer: false,
+                          appBarAnimatedLeadingMenuIcon: AnimatedIcons.close_menu,
+                          appBarActions: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+                              child: Container(
+                                height: 40,
+                                width: 40,
+                                child: IconButton(
+                                  icon:
+                                      Image.asset('images/code.png', color: Colors.white),
+                                  onPressed: () {
+                                    launch(
+                                        'https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/chart/dynamic_updates/live_update/vertical_live_chart.dart');
+                                  },
+                                ),
+                              ),
+                            ),
+                          ],
+                          appBarTitle: AnimatedSwitcher(
+                              duration: duration2,
                     child: Text(sample.title.toString())),
                 backLayer: BackPanel(sample),
                 frontLayer: FrontPanel(sample),
@@ -102,7 +104,8 @@ class _LiveUpdateState extends State<VerticalLineLiveUpdate> {
                 borderRadius: const BorderRadius.vertical(
                     top: Radius.circular(12), bottom: Radius.circular(0)),
               ),
-            ));
+            );
+        });
   }
 }
 
@@ -122,7 +125,7 @@ class _FrontPanelState extends State<FrontPanel> {
   @override
   void initState() {
     super.initState();
-    timer = Timer.periodic(Duration(milliseconds: 10), setTime);
+    timer = Timer.periodic(const Duration(milliseconds: 10), setTime);
   }
 
   @override

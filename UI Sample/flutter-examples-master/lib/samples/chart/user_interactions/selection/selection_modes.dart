@@ -47,7 +47,9 @@ class _DefaultSelectionState extends State<DefaultSelection> {
   @override
   Widget build(BuildContext context) {
     return ScopedModelDescendant<SampleListModel>(
-        builder: (BuildContext context, _, SampleListModel model) => SafeArea(
+        builder: (BuildContext context, _, SampleListModel model) {
+          const Duration duration2 = Duration(milliseconds: 1000);
+          return SafeArea(
               child: Backdrop(
                 needCloseButton: false,
                 panelVisible: frontPanelVisible,
@@ -91,7 +93,7 @@ class _DefaultSelectionState extends State<DefaultSelection> {
                   ),
                 ],
                 appBarTitle: AnimatedSwitcher(
-                    duration: Duration(milliseconds: 1000),
+                    duration: duration2,
                     child: Text(sample.title.toString())),
                 backLayer: BackPanel(sample),
                 frontLayer: FrontPanel(sample),
@@ -102,7 +104,8 @@ class _DefaultSelectionState extends State<DefaultSelection> {
                 borderRadius: const BorderRadius.vertical(
                     top: Radius.circular(12), bottom: Radius.circular(0)),
               ),
-            ));
+            );
+        });
   }
 }
 

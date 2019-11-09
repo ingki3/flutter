@@ -1,19 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="feb71488-3b1f-4535-8b8c-409cd65d032c" name="Default Changelist" comment="" />
+    <list default="true" id="feb71488-3b1f-4535-8b8c-409cd65d032c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Best-Flutter-UI-Templates-master/best_flutter_ui_templates/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Best-Flutter-UI-Templates-master/best_flutter_ui_templates/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/flutter-examples-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flutter-examples-master.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/helper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/helper.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/sample_browser.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/sample_browser.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/axis_features/axis_crossing/axis_crossing.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/axis_features/axis_crossing/axis_crossing.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/axis_features/edge_label_placement/edgelabel_placement.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/axis_features/edge_label_placement/edgelabel_placement.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/axis_features/handling_label_collision/handling_label_collision.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/axis_features/handling_label_collision/handling_label_collision.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/axis_features/multiple_axis_chart/multiple_axis_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/axis_features/multiple_axis_chart/multiple_axis_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/axis_features/opposed_axes/opposed_axes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/axis_features/opposed_axes/opposed_axes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/axis_features/plot_band/Plot_band_recurrence.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/axis_features/plot_band/Plot_band_recurrence.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/axis_features/plot_band/plot_band.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/axis_features/plot_band/plot_band.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/axis_types/category_types/default_category_axis.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/axis_types/category_types/default_category_axis.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/axis_types/category_types/indexed_category_axis.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/axis_types/category_types/indexed_category_axis.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/axis_types/category_types/label_placement.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/axis_types/category_types/label_placement.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/axis_types/date_time_types/date_time_axis_with_label_format.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/axis_types/date_time_types/date_time_axis_with_label_format.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/axis_types/date_time_types/default_date_time_axis.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/axis_types/date_time_types/default_date_time_axis.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/axis_types/logarithmic_types/default_logarithmic_axis.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/axis_types/logarithmic_types/default_logarithmic_axis.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/axis_types/logarithmic_types/inversed_logarithmic_axis.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/axis_types/logarithmic_types/inversed_logarithmic_axis.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/axis_types/numeric_types/default_numeric_axis.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/axis_types/numeric_types/default_numeric_axis.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/axis_types/numeric_types/inversed_numeric_axis.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/axis_types/numeric_types/inversed_numeric_axis.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/axis_types/numeric_types/numeric_axis_with_label_format.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/axis_types/numeric_types/numeric_axis_with_label_format.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/area_series/area_with_emptypoints.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/area_series/area_with_emptypoints.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/area_series/area_with_gradient.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/area_series/area_with_gradient.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/area_series/default_area_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/area_series/default_area_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/area_series/vertical_area_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/area_series/vertical_area_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/bar_series/bar_width_and_spacing.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/bar_series/bar_width_and_spacing.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/bar_series/bar_with_rounded_corners.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/bar_series/bar_with_rounded_corners.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/bar_series/bar_with_track.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/bar_series/bar_with_track.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/bar_series/customized_bar_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/bar_series/customized_bar_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/bar_series/default_bar_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/bar_series/default_bar_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/bubble_series/bubble_filled_with_gradient.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/bubble_series/bubble_filled_with_gradient.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/bubble_series/bubble_with_multiple_series.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/bubble_series/bubble_with_multiple_series.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/bubble_series/bubble_with_various_colors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/bubble_series/bubble_with_various_colors.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/bubble_series/default_bubble_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/bubble_series/default_bubble_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/column_series/back_to_back_column.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/column_series/back_to_back_column.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/column_series/column_width_and_spacing.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/column_series/column_width_and_spacing.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/column_series/column_with_rounded_corners.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/column_series/column_with_rounded_corners.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/column_series/column_with_track.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/column_series/column_with_track.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/column_series/customized_column_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/column_series/customized_column_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/column_series/default_column_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/column_series/default_column_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/line_series/customized_line_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/line_series/customized_line_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/line_series/default_line_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/line_series/default_line_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/line_series/line_with_dashes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/line_series/line_with_dashes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/line_series/multi_colored_line.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/line_series/multi_colored_line.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/rangecolumn_series/default_rangecolumn_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/rangecolumn_series/default_rangecolumn_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/rangecolumn_series/rangecolumn_with_track.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/rangecolumn_series/rangecolumn_with_track.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/rangecolumn_series/vertical_rangecolumn_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/rangecolumn_series/vertical_rangecolumn_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/scatter_series/default_scatter_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/scatter_series/default_scatter_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/scatter_series/scatter_with_various_shapes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/scatter_series/scatter_with_various_shapes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/spline_series/customized_spline_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/spline_series/customized_spline_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/spline_series/default_spline_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/spline_series/default_spline_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/spline_series/spline_types.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/spline_series/spline_types.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/spline_series/spline_with_dashes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/spline_series/spline_with_dashes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/spline_series/vertical_spline_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/spline_series/vertical_spline_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/stacked_series/stacked_area_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/stacked_series/stacked_area_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/stacked_series/stacked_bar_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/stacked_series/stacked_bar_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/stacked_series/stacked_column_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/stacked_series/stacked_column_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/stacked_series/stacked_line_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/stacked_series/stacked_line_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/stepLine_series/default_stepline_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/stepLine_series/default_stepline_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/stepLine_series/stepline_with_dashes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/stepLine_series/stepline_with_dashes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/stepLine_series/vertical_stepline_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/cartesian_charts/stepLine_series/vertical_stepline_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/circular_charts/doughnut_series/default_doughnut_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/circular_charts/doughnut_series/default_doughnut_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/circular_charts/doughnut_series/doughnut_with_center_elevation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/circular_charts/doughnut_series/doughnut_with_center_elevation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/circular_charts/doughnut_series/doughnut_with_color_mapping.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/circular_charts/doughnut_series/doughnut_with_color_mapping.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/circular_charts/doughnut_series/doughnut_with_rounded_corners.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/circular_charts/doughnut_series/doughnut_with_rounded_corners.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/circular_charts/doughnut_series/semi_doughnut_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/circular_charts/doughnut_series/semi_doughnut_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/circular_charts/pie_series/default_pie_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/circular_charts/pie_series/default_pie_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/circular_charts/pie_series/pie_with_grouping.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/circular_charts/pie_series/pie_with_grouping.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/circular_charts/pie_series/pie_with_smart_labels.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/circular_charts/pie_series/pie_with_smart_labels.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/circular_charts/pie_series/pie_with_various_radius.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/circular_charts/pie_series/pie_with_various_radius.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/circular_charts/pie_series/semi_pie_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/circular_charts/pie_series/semi_pie_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/circular_charts/radialbar_series/customized_radialbar_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/circular_charts/radialbar_series/customized_radialbar_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/circular_charts/radialbar_series/default_radialbar_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/circular_charts/radialbar_series/default_radialbar_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/circular_charts/radialbar_series/radialbar_with_legend.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/circular_charts/radialbar_series/radialbar_with_legend.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/dynamic_updates/add_remove_data/add_remove_points.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/dynamic_updates/add_remove_data/add_remove_points.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/dynamic_updates/add_remove_data/add_remove_series.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/dynamic_updates/add_remove_data/add_remove_series.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/dynamic_updates/live_update/live_update.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/dynamic_updates/live_update/live_update.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/dynamic_updates/live_update/vertical_live_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/dynamic_updates/live_update/vertical_live_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/dynamic_updates/update_data_source/update_data_source.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/dynamic_updates/update_data_source/update_data_source.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/funnel_charts/default_funnel_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/funnel_charts/default_funnel_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/funnel_charts/funnel_with_legend.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/funnel_charts/funnel_with_legend.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/funnel_charts/funnel_with_smart_labels.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/funnel_charts/funnel_with_smart_labels.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/home/axis_types.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/home/axis_types.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/home/cartesian_types.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/home/cartesian_types.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/home/circular_types.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/home/circular_types.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/home/dynamic_updates.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/home/dynamic_updates.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/home/other_features.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/home/other_features.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/home/radial_gauge.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/home/radial_gauge.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/home/user_interaction.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/home/user_interaction.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/legend/chart_with_customized_legend.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/legend/chart_with_customized_legend.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/legend/chart_with_legend.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/legend/chart_with_legend.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/legend/legend_with_various_options.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/legend/legend_with_various_options.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/pyramid_charts/default_pyramid_chart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/pyramid_charts/default_pyramid_chart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/pyramid_charts/pyramid_with_legend.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/pyramid_charts/pyramid_with_legend.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/pyramid_charts/pyramid_with_smart_labels.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/pyramid_charts/pyramid_with_smart_labels.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/series_features/animation/dynamic_animation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/series_features/animation/dynamic_animation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/series_features/animation/series_animation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/series_features/animation/series_animation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/series_features/annotation/chart_with_annotation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/series_features/annotation/chart_with_annotation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/series_features/annotation/chart_with_watermark.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/series_features/annotation/chart_with_watermark.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/series_features/data_label/default_datalabels.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/series_features/data_label/default_datalabels.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/series_features/empty_point/chart_with_empty_points.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/series_features/empty_point/chart_with_empty_points.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/series_features/marker/various_marker_shapes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/series_features/marker/various_marker_shapes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/series_features/sorting/sorting_options.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/series_features/sorting/sorting_options.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/user_interactions/crosshair/chart_with_crosshair.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/user_interactions/crosshair/chart_with_crosshair.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/user_interactions/selection/selection_modes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/user_interactions/selection/selection_modes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/user_interactions/tooltip/default_tooltip.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/user_interactions/tooltip/default_tooltip.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/user_interactions/trackball/chart_with_trackball.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/user_interactions/trackball/chart_with_trackball.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/user_interactions/zooming_panning/pinch_zooming.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/user_interactions/zooming_panning/pinch_zooming.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/user_interactions/zooming_panning/selection_zooming.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/user_interactions/zooming_panning/selection_zooming.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/chart/user_interactions/zooming_panning/zooming_with_custom_buttons.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/chart/user_interactions/zooming_panning/zooming_with_custom_buttons.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/animation/radial_bounceout.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/animation/radial_bounceout.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/animation/radial_easeanimation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/animation/radial_easeanimation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/animation/radial_easeincirc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/animation/radial_easeincirc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/animation/radial_easeout.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/animation/radial_easeout.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/animation/radial_elasticout.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/animation/radial_elasticout.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/animation/radial_linearanimation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/animation/radial_linearanimation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/animation/radial_slowmiddle.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/animation/radial_slowmiddle.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/annotation/direction_compass.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/annotation/direction_compass.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/annotation/image_annotation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/annotation/image_annotation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/annotation/text_annotation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/annotation/text_annotation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/axis_feature/custom_labels.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/axis_feature/custom_labels.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/axis_feature/default_gauge_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/axis_feature/default_gauge_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/axis_feature/multiple_axis.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/axis_feature/multiple_axis.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/axis_feature/non_linearlabel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/axis_feature/non_linearlabel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/axis_feature/radiallabel_customization.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/axis_feature/radiallabel_customization.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/axis_feature/range_colors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/axis_feature/range_colors.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/axis_feature/tick_customization.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/axis_feature/tick_customization.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/pointer_interaction/radial_pointerdragging.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/pointer_interaction/radial_pointerdragging.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/pointers/multiple_needle.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/pointers/multiple_needle.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/pointers/multiple_ranges.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/pointers/multiple_ranges.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/pointers/radial_marker.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/pointers/radial_marker.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/pointers/text_pointer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/pointers/text_pointer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/ranges/multiple_ranges.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/ranges/multiple_ranges.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/ranges/range_dataLabel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/ranges/range_dataLabel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/ranges/range_thickness.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/ranges/range_thickness.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/showcase/clock_sample.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/showcase/clock_sample.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/showcase/distance_tracker.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/showcase/distance_tracker.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/samples/gauge/showcase/gauge_overview.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/samples/gauge/showcase/gauge_overview.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/flutter_backdrop.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/flutter_backdrop.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../credit_card_sms_receiver/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../credit_card_sms_receiver/pubspec.lock" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_29" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="2134536303027ece" />
+  <component name="FavoritesManager">
+    <favorites_list name="flutter-examples-master" />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/main.dart">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -29,7 +199,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
@@ -39,20 +209,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane" />
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="flutter-examples-master" type="1abcf292:AndroidViewProjectNode" />
-              <item name="flutter-examples-master" type="e9137016:NonAndroidModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -61,7 +221,7 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="dart.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunDashboard">
@@ -95,40 +255,54 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="952" extended-state="6" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.32967034" />
-      <window_info id="Structure" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="Build Variants" side_tool="true" />
-      <window_info id="Resources Explorer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Dart Analysis" weight="0.32906976" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Android Profiler" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TODO" />
-      <window_info anchor="bottom" id="Run" />
-      <window_info anchor="bottom" id="Debug" weight="0.32906976" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
-      <window_info anchor="bottom" id="Logcat" />
-      <window_info anchor="bottom" id="Messages" weight="0.32906976" />
-      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Flutter Inspector" />
-      <window_info anchor="right" id="Flutter Outline" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info id="Captures" order="0" sideWeight="0.50102043" side_tool="true" weight="0.32967034" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49619484" visible="true" weight="0.2039072" />
+      <window_info id="Structure" order="2" sideWeight="0.50380516" side_tool="true" visible="true" weight="0.2039072" />
+      <window_info id="Favorites" order="3" sideWeight="0.5020408" side_tool="true" weight="0.22649573" />
+      <window_info id="Build Variants" order="4" sideWeight="0.5020408" side_tool="true" weight="0.22649573" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Designer" order="6" />
+      <window_info id="Resources Explorer" order="7" sideWeight="0.4977169" weight="0.22649573" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info anchor="bottom" id="Find" />
+      <window_info anchor="bottom" id="Dart Analysis" order="0" weight="0.32906976" />
+      <window_info anchor="bottom" id="Run" order="1" />
+      <window_info anchor="bottom" id="TODO" order="2" visible="true" weight="0.32959184" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32906976" />
+      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Logcat" order="8" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32906976" />
+      <window_info anchor="bottom" id="Android Profiler" order="10" show_stripe_button="false" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info anchor="right" id="Flutter Inspector" order="3" />
+      <window_info anchor="right" id="Flutter Outline" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

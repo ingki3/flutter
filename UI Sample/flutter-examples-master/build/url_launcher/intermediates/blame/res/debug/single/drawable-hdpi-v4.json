@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/mac/dev_project/VisualStudioCode/UI Sample/flutter-examples-master/build/url_launcher/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_normal.9.png",
+        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-hdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/mac/dev_project/VisualStudioCode/UI Sample/flutter-examples-master/build/url_launcher/intermediates/res/merged/debug/drawable-hdpi-v4/notify_panel_notification_icon_bg.png",
+        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/mac/dev_project/VisualStudioCode/UI Sample/flutter-examples-master/build/url_launcher/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_low_pressed.9.png",
+        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/mac/dev_project/VisualStudioCode/UI Sample/flutter-examples-master/build/url_launcher/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_normal_pressed.9.png",
+        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/mac/dev_project/VisualStudioCode/UI Sample/flutter-examples-master/build/url_launcher/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_low_normal.9.png",
+        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
+    }
+]

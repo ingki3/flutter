@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/mac/dev_project/VisualStudioCode/UI Sample/flutter-examples-master/build/url_launcher/intermediates/res/merged/debug/values-in/values-in.xml",
+            "map": [
+                {
+                    "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/values-in/values-in.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/mac/dev_project/VisualStudioCode/UI Sample/flutter-examples-master/build/url_launcher/intermediates/incremental/mergeDebugResources/merged.dir/values-in/values-in.xml",
+            "map": [
+                {
+                    "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/79492e1efc09de73cdcddb8197f0ee56/res/values-in/values-in.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

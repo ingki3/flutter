@@ -5,10 +5,10 @@ import 'package:flutter/services.dart';
 import 'navigationHomeScreen.dart';
 
 void main() {
-  SystemChrome.setPreferredOrientations(
-          [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])
-      .then((_) => runApp(new MyApp()));
-  // runApp(new MyApp());
+//  SystemChrome.setPreferredOrientations(
+//          [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])
+//      .then((_) => runApp(new MyApp()));
+   runApp(new MyApp());
 }
 
 class MyApp extends StatelessWidget {
