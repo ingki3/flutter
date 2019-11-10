@@ -18,8 +18,6 @@ class HotelListData {
     this.rating = 4.0;
 //    this.rating = document['rating'];
     this.perNight = 180;
-
-    print("********************************LIST DATA CREATED***************************8");
   }
 
 

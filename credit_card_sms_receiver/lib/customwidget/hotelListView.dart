@@ -32,7 +32,7 @@ class HotelListView extends StatelessWidget {
           children: <Widget>[
             Column(
               children: <Widget>[
-                AspectRatio(
+               AspectRatio(
                   aspectRatio: 2,
                   child: Image.asset(
                     hotelData.imagePath,
@@ -136,7 +136,7 @@ class HotelListView extends StatelessWidget {
                 ),
               ],
             ),
-            Positioned(
+/*            Positioned(
               top: 8,
               right: 8,
               child: Material(
@@ -155,7 +155,7 @@ class HotelListView extends StatelessWidget {
                   ),
                 ),
               ),
-            )
+            )*/
           ],
         ),
       ),
