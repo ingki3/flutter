@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HotelAppTheme {
+class CustomAppTheme {
 
   static TextTheme _buildTextTheme(TextTheme base) {
     var fontName = "WorkSans";
@@ -64,3 +64,5 @@ class HexColor extends Color {
 
   HexColor(final String hexColor) : super(_getColorFromHex(hexColor));
 }
+
+

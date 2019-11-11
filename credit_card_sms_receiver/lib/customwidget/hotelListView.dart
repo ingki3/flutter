@@ -32,7 +32,7 @@ class HotelListView extends StatelessWidget {
           children: <Widget>[
             Column(
               children: <Widget>[
-               AspectRatio(
+              AspectRatio(
                   aspectRatio: 2,
                   child: Image.asset(
                     hotelData.imagePath,
@@ -40,7 +40,7 @@ class HotelListView extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  color: HotelAppTheme.buildLightTheme().backgroundColor,
+                  color: CustomAppTheme.buildLightTheme().backgroundColor,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,7 +75,7 @@ class HotelListView extends StatelessWidget {
                                     Icon(
                                       FontAwesomeIcons.mapMarkerAlt,
                                       size: 12,
-                                      color: HotelAppTheme.buildLightTheme().primaryColor,
+                                      color: CustomAppTheme.buildLightTheme().primaryColor,
                                     ),
                                     Expanded(
                                       child: Text(
@@ -95,8 +95,8 @@ class HotelListView extends StatelessWidget {
                                         starCount: 5,
                                         rating: hotelData.rating,
                                         size: 20,
-                                        color: HotelAppTheme.buildLightTheme().primaryColor,
-                                        borderColor: HotelAppTheme.buildLightTheme().primaryColor,
+                                        color: CustomAppTheme.buildLightTheme().primaryColor,
+                                        borderColor: CustomAppTheme.buildLightTheme().primaryColor,
                                       ),
                                       Text(
                                         " ${hotelData.reviews} Reviews",
@@ -136,26 +136,6 @@ class HotelListView extends StatelessWidget {
                 ),
               ],
             ),
-/*            Positioned(
-              top: 8,
-              right: 8,
-              child: Material(
-                color: Colors.transparent,
-                child: InkWell(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(32.0),
-                  ),
-                  onTap: () {},
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Icon(
-                      Icons.favorite_border,
-                      color: HotelAppTheme.buildLightTheme().primaryColor,
-                    ),
-                  ),
-                ),
-              ),
-            )*/
           ],
         ),
       ),
