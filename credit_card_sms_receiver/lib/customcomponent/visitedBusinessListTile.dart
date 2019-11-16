@@ -1,15 +1,15 @@
+import 'package:credit_card_sms_receiver/model/visitedBusinessListTileData.dart';
 import 'package:credit_card_sms_receiver/theme/hotelAppTheme.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
-import 'package:credit_card_sms_receiver/model/hotelListData.dart';
 
-class HotelListView extends StatelessWidget {
+class VisitedBusinessListTile extends StatelessWidget {
 //  final VoidCallback callback;
-  final HotelListData hotelData;
+  final VisitedBusinessListTileData item;
 
-  const HotelListView({Key key, this.hotelData}) : super(key: key);
+  const VisitedBusinessListTile({Key key, this.item}) : super(key: key);
 //  const HotelListView({Key key, this.hotelData, this.animationController, this.animation, this.callback}) : super(key: key);
 
 
@@ -35,7 +35,7 @@ class HotelListView extends StatelessWidget {
               AspectRatio(
                   aspectRatio: 2,
                   child: Image.asset(
-                    hotelData.imagePath,
+                    item.imagePath,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -54,7 +54,7 @@ class HotelListView extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Text(
-                                  hotelData.titleTxt,
+                                  item.titleTxt,
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w600,
@@ -66,7 +66,7 @@ class HotelListView extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: <Widget>[
                                     Text(
-                                      hotelData.subTxt,
+                                      item.subTxt,
                                       style: TextStyle(fontSize: 14, color: Colors.grey.withOpacity(0.8)),
                                     ),
                                     SizedBox(
@@ -79,7 +79,7 @@ class HotelListView extends StatelessWidget {
                                     ),
                                     Expanded(
                                       child: Text(
-                                        "${hotelData.dist.toStringAsFixed(1)} km to city",
+                                        "${item.dist.toStringAsFixed(1)} km to city",
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(fontSize: 14, color: Colors.grey.withOpacity(0.8)),
                                       ),
@@ -93,13 +93,13 @@ class HotelListView extends StatelessWidget {
                                       SmoothStarRating(
                                         allowHalfRating: true,
                                         starCount: 5,
-                                        rating: hotelData.rating,
+                                        rating: item.rating,
                                         size: 20,
                                         color: CustomAppTheme.buildLightTheme().primaryColor,
                                         borderColor: CustomAppTheme.buildLightTheme().primaryColor,
                                       ),
                                       Text(
-                                        " ${hotelData.reviews} Reviews",
+                                        " ${item.reviews} Reviews",
                                         style: TextStyle(fontSize: 14, color: Colors.grey.withOpacity(0.8)),
                                       ),
                                     ],
@@ -117,7 +117,7 @@ class HotelListView extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: <Widget>[
                             Text(
-                              "\$${hotelData.perNight}",
+                              "\$${item.perNight}",
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,

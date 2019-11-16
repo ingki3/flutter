@@ -1,11 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:credit_card_sms_receiver/model/hotelListData.dart';
+import 'package:credit_card_sms_receiver/customcomponent/visitedBusinessListTile.dart';
+import 'package:credit_card_sms_receiver/model/visitedBusinessListTileData.dart';
 //import 'package:credit_card_sms_receiver/theme/hotelAppTheme.dart';
 import 'package:credit_card_sms_receiver/user_status.dart';
 import 'package:flutter/material.dart';
 //import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'customwidget/hotelListView.dart';
 
 class HitoryPage extends StatefulWidget {
   @override
@@ -50,12 +50,11 @@ Widget build(BuildContext context) {
         }
 
         var items = snapshot.data?.documents ?? [];
-        print("++++++++++++++++++++++++++++++++++++++++ ${items.length})");
         return ListView.builder(
           itemCount: items.length,
           itemBuilder: (context, index) {
-            return new HotelListView(
-              hotelData: new HotelListData(items[index])
+            return new VisitedBusinessListTile(
+              item: new VisitedBusinessListTileData(items[index])
             );
           },
         );

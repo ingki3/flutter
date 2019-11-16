@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class HotelListData {
+class VisitedBusinessListTileData {
   String imagePath;
   String titleTxt;
   String subTxt;
@@ -9,8 +9,8 @@ class HotelListData {
   int reviews;
   int perNight;
 
-  HotelListData(DocumentSnapshot document) {
-    this.imagePath = 'assets/hotel_1.png';
+  VisitedBusinessListTileData(DocumentSnapshot document) {
+    this.imagePath = 'assets/images/hotel_1.png';
     this.titleTxt = document['name'];
     this.subTxt = document['currentTime'].toDate().toString();
     this.dist = 1.8;
