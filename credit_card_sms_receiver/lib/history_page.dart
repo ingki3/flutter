@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:credit_card_sms_receiver/customcomponent/custom_app_bar.dart';
 import 'package:credit_card_sms_receiver/customcomponent/visitedBusinessListTile.dart';
 import 'package:credit_card_sms_receiver/model/visitedBusinessListTileData.dart';
+import 'package:credit_card_sms_receiver/theme/custom_app_theme.dart';
 //import 'package:credit_card_sms_receiver/theme/hotelAppTheme.dart';
 import 'package:credit_card_sms_receiver/user_status.dart';
 import 'package:flutter/material.dart';
@@ -34,8 +36,19 @@ class _HitoryPageState extends State<HitoryPage>with TickerProviderStateMixin  {
   @override
 Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
-        body: getItemList(),
+      body: Theme(
+        data: CustomAppTheme.buildLightTheme(),
+        child: Column(
+          children: <Widget>[
+            CustomAppBar(
+              title:"History"
+            ),
+            Expanded(
+              child: getItemList()
+            ),
+          ],
+        )
+      )
     );
   }
 
@@ -61,39 +74,4 @@ Widget build(BuildContext context) {
       },
     );
   }
-
-
 }
-
-
-
-/*
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: StreamBuilder<QuerySnapshot>(
-        stream: Firestore.instance.collection('post')
-                .where("userId", isEqualTo: userStatus.uid)
-                .snapshots(),
-        builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-          if(!snapshot.hasData) {
-            return const Text("Loading......");
-          }
-          else {
-            return ListView(
-              children: snapshot.data.documents.map((DocumentSnapshot document) {
-                return new ListTile(
-                  title: new Text(document['name']),
-                  subtitle: new Text(document['currentTime'].toDate().toString()),
-                );
-              }).toList(),
-            );
-          }
-        },
-      ),
-    );
-  }
-*/
-
-

@@ -15,7 +15,7 @@ class SignIn extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Instagram Clone',
+            Text("Secret Project",
               style: TextStyle(
                 fontSize: 40.0,
                 fontWeight: FontWeight.bold, 
