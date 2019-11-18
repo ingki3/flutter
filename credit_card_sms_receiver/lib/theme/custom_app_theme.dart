@@ -24,7 +24,7 @@ class CustomAppTheme {
 
   static const TextStyle mainLabel = TextStyle( // Caption -> caption
     fontFamily: 'WorkSans',
-    letterSpacing: 0.18,
+//    letterSpacing: 0.18,
     fontWeight: FontWeight.w600,
     fontSize: 22, // was lightText
   );

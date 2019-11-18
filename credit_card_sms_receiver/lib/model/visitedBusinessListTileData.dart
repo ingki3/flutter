@@ -15,8 +15,7 @@ class VisitedBusinessListTileData {
     this.subTxt = document['currentTime'].toDate().toString();
     this.dist = 1.8;
     this.reviews = 8;
-    this.rating = 4.0;
-//    this.rating = document['rating'];
+    this.rating = document['rating'];
     this.perNight = 180;
   }
 

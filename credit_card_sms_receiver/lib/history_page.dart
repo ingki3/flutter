@@ -56,6 +56,7 @@ Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
       stream: Firestore.instance.collection('post')
               .where("userId", isEqualTo: userStatus.uid)
+              .orderBy('currentTime', descending: true)
               .snapshots(),
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
         if(!snapshot.hasData) {
