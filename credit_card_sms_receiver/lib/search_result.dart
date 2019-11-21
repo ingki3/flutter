@@ -12,4 +12,18 @@ class SearchResult{
   String toString() {
     return ("SearchResult : ${this.msgMap["business"]}, $currentLatitude, $currentLongitude, ${resultItem.length}");
   }
+
+  int indexOfBusinessResult(String id) {
+    int index = 0;
+    for( var item in resultItem) {
+      if(item.hasSameId(id) == true){
+        return index;
+      }
+      else{
+        index = index + 1;
+      }
+    }
+    return -1;
+  }
+
 }

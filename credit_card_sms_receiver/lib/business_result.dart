@@ -20,4 +20,8 @@ class BusinessResult {
       isExpanded: false,
     );
   }
+
+  bool hasSameId(String id) {
+    return this.id == id;
+  }
 }

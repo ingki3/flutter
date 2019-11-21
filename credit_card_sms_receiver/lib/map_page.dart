@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 //import 'package:credit_card_sms_receiver/rate_page.dart';
@@ -20,14 +21,15 @@ class MapPage extends StatefulWidget {
 class _MapPageState extends State<MapPage> {
   Completer<GoogleMapController> _controller = Completer();
   CameraPosition position;
-  String markerId; 
+  String markerId;
+  int itemIndex;
 
   @override
   void initState() {
     super.initState();
     this.position = CameraPosition(
       target: LatLng(widget.result.currentLatitude, widget.result.currentLongitude),
-      zoom: 18.0,
+      zoom: 17.0,
     );
   }
 
@@ -67,7 +69,7 @@ class _MapPageState extends State<MapPage> {
         return const Text("Loading......");
         }
 
-        var items = snapshot.data?.documents ?? [];
+//        var items = snapshot.data?.documents ?? [];
 
         return Stack(
           children: <Widget>[
@@ -88,7 +90,8 @@ class _MapPageState extends State<MapPage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Text(
-                                  items[0]["name"],
+                                  widget.result.resultItem[this.itemIndex].name,
+//                                  items[0]["name"],
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w600,
@@ -103,7 +106,8 @@ class _MapPageState extends State<MapPage> {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: <Widget>[
                                     Text(
-                                      items[0]["address"],
+                                      widget.result.resultItem[this.itemIndex].address,
+//                                      items[0]["address"],
                                       style: TextStyle(fontSize: 14, color: Colors.grey.withOpacity(0.8)),
                                     ),
                                     SizedBox(
@@ -169,18 +173,14 @@ class _MapPageState extends State<MapPage> {
 
       },
     );
-
-
-
-
-
-
-
   }
 
 
   Set<Marker> _getMarkers() {
     Set<Marker> result = Set();
+    String closestMarkerId = widget.result.resultItem[0].id;
+    double cloestDistance = getDistance(widget.result.currentLatitude, widget.result.currentLongitude, 
+                                  widget.result.resultItem[0].latitude, widget.result.resultItem[0].longitude);
     for (var item in widget.result.resultItem){
       result.add(
         Marker(
@@ -194,12 +194,29 @@ class _MapPageState extends State<MapPage> {
           onTap: () {
             setState(() {
               this.markerId = item.id;
+              this.itemIndex = widget.result.indexOfBusinessResult(closestMarkerId);
             });
           },
         )
       );
+      double distance = getDistance(widget.result.currentLatitude, widget.result.currentLongitude, 
+                        item.latitude, item.longitude);
+      if(distance < cloestDistance) {
+        cloestDistance = distance;
+        closestMarkerId = item.id;
+      }
+
+      setState(() {
+        this.markerId = closestMarkerId;
+        this.itemIndex = widget.result.indexOfBusinessResult(closestMarkerId);
+      });
     }
 
     return result;
   }
+
+  double getDistance(double curLat, double curLongitude, double lat, double longitude) {
+    return sqrt((curLat-lat)*(curLat-lat) + (curLongitude-longitude) * (curLongitude-longitude));
+  }
+
 }
