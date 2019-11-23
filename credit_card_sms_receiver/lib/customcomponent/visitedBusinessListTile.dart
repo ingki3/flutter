@@ -93,7 +93,9 @@ class VisitedBusinessListTile extends StatelessWidget {
                                       SmoothStarRating(
                                         allowHalfRating: true,
                                         starCount: 5,
-                                        rating: item.rating,
+                                        rating: item.rating == null
+                                          ? 0
+                                          : item.rating,
                                         size: 20,
                                         color: CustomAppTheme.buildLightTheme().primaryColor,
                                         borderColor: CustomAppTheme.buildLightTheme().primaryColor,

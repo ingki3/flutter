@@ -19,6 +19,21 @@ class RatePage extends StatefulWidget {
 class _RatePageState extends State<RatePage> {
 
   CategoryType categoryType = CategoryType.ui;
+  final textEditingController = TextEditingController();
+  String preference;
+
+  @override
+  void initState() {
+    this.preference = '3';
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    textEditingController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,7 +84,7 @@ class _RatePageState extends State<RatePage> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: <Widget>[
                                       Text(
-                                        "경기도 성남시 분당구...",
+                                        "이 곳에서 어땠나요?",
   //                                      widget.item["address"],
                                         style: CustomAppTheme.greyText,
                                       ),
@@ -81,31 +96,13 @@ class _RatePageState extends State<RatePage> {
                                         size: 12,
                                         color: CustomAppTheme.buildLightTheme().primaryColor,
                                       ),
-                                      Expanded(
-                                        child: Text(
-                                          "8 km to city",
-                                          overflow: TextOverflow.ellipsis,
-                                          style: CustomAppTheme.greyText,
-                                        ),
-                                      ),
                                     ],
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(top: 4),
                                     child: Row(
                                       children: <Widget>[
-                                        SmoothStarRating(
-                                          allowHalfRating: true,
-                                          starCount: 5,
-                                          rating: 3.5,
-                                          size: 20,
-                                          color: CustomAppTheme.buildLightTheme().primaryColor,
-                                          borderColor: CustomAppTheme.buildLightTheme().primaryColor,
-                                        ),
-                                        Text(
-                                          " 7 Reviews",
-                                          style: CustomAppTheme.greyText,
-                                        ),
+                                        _getPrefenceList(),
                                       ],
                                     ),
                                   ),
@@ -122,6 +119,15 @@ class _RatePageState extends State<RatePage> {
                     child: Wrap(
                       alignment: WrapAlignment.start,
                       children: _getChipList(),
+                    ),
+                  ),
+                  Container(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextField(
+                        controller: textEditingController,
+                        decoration: InputDecoration(hintText: '내용을 입력하세요.'),
+                      ),
                     ),
                   ),
                   Row(
@@ -176,7 +182,44 @@ class _RatePageState extends State<RatePage> {
 
     return result;
   }
+
+  Widget _getPrefenceList() {
+    return  DropdownButton<String>(
+      items: [
+        DropdownMenuItem<String>(
+          child: Text("다른 사람들에게도 강력 추천!(★★★★★)"),
+          value: '5',
+        ),
+        DropdownMenuItem<String>(
+          child: Text("다시 방문 할 의향 있음.(★★★★☆)"),
+          value: '4',
+        ),
+        DropdownMenuItem<String>(
+          child: Text("그럭 저럭 괜찮았음.(★★★☆☆)"),
+          value: '3'
+        ),
+        DropdownMenuItem<String>(
+          child: Text("일부러 다시 올 생각은 없음.(★★☆☆☆)"),
+          value: '2',
+        ),
+        DropdownMenuItem<String>(
+          child: Text("완전 비추.(★☆☆☆☆)"),
+          value: '1',
+        ),
+      ],
+      onChanged: (value) {
+        setState(() {
+          this.preference = value;
+        });
+      },
+      hint: Text('Select Item'),
+      value: this.preference,
+    );
+  }
+
 }
+
+
 
 
 

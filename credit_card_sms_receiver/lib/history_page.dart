@@ -3,10 +3,8 @@ import 'package:credit_card_sms_receiver/customcomponent/custom_app_bar.dart';
 import 'package:credit_card_sms_receiver/customcomponent/visitedBusinessListTile.dart';
 import 'package:credit_card_sms_receiver/model/visitedBusinessListTileData.dart';
 import 'package:credit_card_sms_receiver/theme/custom_app_theme.dart';
-//import 'package:credit_card_sms_receiver/theme/hotelAppTheme.dart';
-import 'package:credit_card_sms_receiver/user_status.dart';
+//import 'package:credit_card_sms_receiver/user_status.dart';
 import 'package:flutter/material.dart';
-//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 
 class HitoryPage extends StatefulWidget {
@@ -55,7 +53,7 @@ Widget build(BuildContext context) {
   Widget getItemList() {
     return StreamBuilder<QuerySnapshot>(
       stream: Firestore.instance.collection('post')
-              .where("userId", isEqualTo: userStatus.uid)
+//              .where("userId", isEqualTo: userStatus.uid)
               .orderBy('currentTime', descending: true)
               .snapshots(),
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
