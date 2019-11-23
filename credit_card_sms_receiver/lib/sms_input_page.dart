@@ -176,10 +176,8 @@ class _SmsInputPageState extends State<SmsInputPage> {
       List<BusinessResult> resultList = List();
 
       for(var item in itemList["results"]){
-//        print(item);
+        print(item);
         resultList.add(BusinessResult.fromJson(item));
-        print(item["name"]);
-        print(item["vicinity"]);
       }
       resultList.sort((a, b) => a.id.compareTo(b.id));
 

@@ -38,3 +38,28 @@ Admin 키
 
 
 https://dev.to/protium/flutter-background-services-19a4
+
+
+
+{geometry:
+    {location: 
+        {lat: 37.391284, lng: 127.07772},
+    viewport:
+        {northeast:
+            {lat: 37.39263382989272, lng: 127.0790698298927},
+        southwest: {lat: 37.38993417010727, lng: 127.0763701701073}
+        }
+    },
+    icon: https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png,
+    id: 83a7c76fe304a2aee3233a5dcda2ae6689f90570,
+    name: 스타벅스 서판교점,
+    opening_hours:
+        {open_now: true},
+    photos: 
+        [
+            {height: 5312,
+            html_attributions: [<a href="https://maps.google.com/maps/contrib/117029508363814678823/photos">최정화</a>],
+            photo_reference: CmRaAAAAZa6kr9HZaydhjx8SgHCp5zcAEwABK5g729syfu_j9nfZ_hVcrdIp_kCDOxHgmcDxtF9gjyjizeeU-oTfj0ZiNgKsdkshu7TSm2M-2pwzaRa3Vx95rHrcO8Gt2uoGEiDYEhB0fWa0seBuNyURWVTuQKx_GhSmDsshkhVpttdStAXIgcRQKo_ILw, width: 2988}
+        ],
+            place_id: ChIJU9QnqvRYezURNzNhMOXI6l0,
+            plus_code: {compound_code: 93RH+G3 성남시 경기도, global_code: 8Q9993RH+G3}, price_level: 2, rating: 4.1, reference: ChIJU9QnqvRYezURNzNhMOXI6l0, scope: GOOGLE, types: [cafe, food, point_of_interest, store, establishment], user_ratings_total: 255

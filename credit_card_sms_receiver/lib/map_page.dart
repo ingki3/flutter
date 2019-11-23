@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:credit_card_sms_receiver/rate_page.dart';
 //import 'package:credit_card_sms_receiver/rate_page.dart';
 import 'package:credit_card_sms_receiver/search_result.dart';
 import 'package:credit_card_sms_receiver/theme/custom_app_theme.dart';
@@ -32,7 +33,6 @@ class _MapPageState extends State<MapPage> {
       zoom: 17.0,
     );
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -150,12 +150,12 @@ class _MapPageState extends State<MapPage> {
                                   child: Text("Yes, I'm Here. I want to Rate!!", style: TextStyle(fontSize: 20, color: Colors.grey.withOpacity(0.8), fontWeight: FontWeight.bold),),
                                   textColor: Colors.blue,
                                   onPressed: (){
-/*
+
                                     Navigator.push(context, 
-                                        MaterialPageRoute(builder:  (context) => RatePage(item:items[0])
+                                        MaterialPageRoute(builder:  (context) => RatePage(itemIndex:this.itemIndex, result:widget.result)
                                       )
                                     );
-                                    */
+                                    
                                   },
                                 )
                               ],

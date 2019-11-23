@@ -1,5 +1,4 @@
 import 'package:credit_card_sms_receiver/main_loading.dart';
-import 'package:credit_card_sms_receiver/rate_page.dart';
 import 'package:credit_card_sms_receiver/root_page.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
@@ -11,8 +10,8 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 
 
-void main() => runApp(new MaterialApp(home: new RatePage()));
-//void main() => runApp(new MaterialApp(home: new MyApp()));
+//void main() => runApp(new MaterialApp(home: new RatePage()));
+void main() => runApp(new MaterialApp(home: new MyApp()));
 
 
 class MyApp extends StatefulWidget {

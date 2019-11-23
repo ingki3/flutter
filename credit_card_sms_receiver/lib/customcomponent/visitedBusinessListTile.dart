@@ -1,8 +1,8 @@
 import 'package:credit_card_sms_receiver/model/visitedBusinessListTileData.dart';
 import 'package:credit_card_sms_receiver/theme/custom_app_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:smooth_star_rating/smooth_star_rating.dart';
+//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+//import 'package:smooth_star_rating/smooth_star_rating.dart';
 
 
 class VisitedBusinessListTile extends StatelessWidget {
@@ -32,13 +32,13 @@ class VisitedBusinessListTile extends StatelessWidget {
           children: <Widget>[
             Column(
               children: <Widget>[
-              AspectRatio(
+/*              AspectRatio(
                   aspectRatio: 2,
                   child: Image.asset(
-                    item.imagePath,
+                    item.iconImagePath,
                     fit: BoxFit.cover,
                   ),
-                ),
+                ), */
                 Container(
                   color: CustomAppTheme.buildLightTheme().backgroundColor,
                   child: Row(
@@ -69,43 +69,7 @@ class VisitedBusinessListTile extends StatelessWidget {
                                       item.subTxt,
                                       style: TextStyle(fontSize: 14, color: Colors.grey.withOpacity(0.8)),
                                     ),
-                                    SizedBox(
-                                      width: 4,
-                                    ),
-                                    Icon(
-                                      FontAwesomeIcons.mapMarkerAlt,
-                                      size: 12,
-                                      color: CustomAppTheme.buildLightTheme().primaryColor,
-                                    ),
-                                    Expanded(
-                                      child: Text(
-                                        "${item.dist.toStringAsFixed(1)} km to city",
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(fontSize: 14, color: Colors.grey.withOpacity(0.8)),
-                                      ),
-                                    ),
                                   ],
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 4),
-                                  child: Row(
-                                    children: <Widget>[
-                                      SmoothStarRating(
-                                        allowHalfRating: true,
-                                        starCount: 5,
-                                        rating: item.rating == null
-                                          ? 0
-                                          : item.rating,
-                                        size: 20,
-                                        color: CustomAppTheme.buildLightTheme().primaryColor,
-                                        borderColor: CustomAppTheme.buildLightTheme().primaryColor,
-                                      ),
-                                      Text(
-                                        " ${item.reviews} Reviews",
-                                        style: TextStyle(fontSize: 14, color: Colors.grey.withOpacity(0.8)),
-                                      ),
-                                    ],
-                                  ),
                                 ),
                               ],
                             ),

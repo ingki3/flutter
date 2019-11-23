@@ -1,30 +1,35 @@
-//import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+//import 'package:credit_card_sms_receiver/business_result.dart';
 import 'package:credit_card_sms_receiver/customcomponent/custom_app_bar.dart';
+import 'package:credit_card_sms_receiver/history_page.dart';
+import 'package:credit_card_sms_receiver/search_result.dart';
 import 'package:credit_card_sms_receiver/theme/custom_app_theme.dart';
+import 'package:credit_card_sms_receiver/user_status.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:smooth_star_rating/smooth_star_rating.dart';
 
-import 'customcomponent/status_filter_chip.dart';
+//import 'customcomponent/status_filter_chip.dart';
 
 class RatePage extends StatefulWidget {
 
-//  final DocumentSnapshot item;
+  final SearchResult result;
+  final int itemIndex;
 
-//  RatePage({Key key, this.item});
+  RatePage({Key key, this.result, this.itemIndex});
   @override
   _RatePageState createState() => _RatePageState();
 }
 
 class _RatePageState extends State<RatePage> {
 
-  CategoryType categoryType = CategoryType.ui;
   final textEditingController = TextEditingController();
   String preference;
+  String withWho;
 
   @override
   void initState() {
     this.preference = '3';
+    this.withWho = "alone";
     super.initState();
   }
 
@@ -84,6 +89,33 @@ class _RatePageState extends State<RatePage> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: <Widget>[
                                       Text(
+                                        "누구와 함께 왔나요?",
+  //                                      widget.item["address"],
+                                        style: CustomAppTheme.greyText,
+                                      ),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Icon(
+                                        FontAwesomeIcons.mapMarkerAlt,
+                                        size: 12,
+                                        color: CustomAppTheme.buildLightTheme().primaryColor,
+                                      ),
+                                    ],
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 4),
+                                    child: Row(
+                                      children: <Widget>[
+                                        _getAccompanyList(),
+                                      ],
+                                    ),
+                                  ),
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
                                         "이 곳에서 어땠나요?",
   //                                      widget.item["address"],
                                         style: CustomAppTheme.greyText,
@@ -102,9 +134,34 @@ class _RatePageState extends State<RatePage> {
                                     padding: const EdgeInsets.only(top: 4),
                                     child: Row(
                                       children: <Widget>[
-                                        _getPrefenceList(),
+                                        _getPreferenceList(),
                                       ],
                                     ),
+                                  ),
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                        "추가로 알려주실 내용 있으세요?",
+  //                                      widget.item["address"],
+                                        style: CustomAppTheme.greyText,
+                                      ),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Icon(
+                                        FontAwesomeIcons.mapMarkerAlt,
+                                        size: 12,
+                                        color: CustomAppTheme.buildLightTheme().primaryColor,
+                                      ),
+                                    ],
+                                  ),
+                                  Container(
+                                    child: TextField(
+                                        controller: textEditingController,
+                                        decoration: InputDecoration(hintText: '내용을 입력하세요.'),
+                                      ),
                                   ),
                                 ],
                               ),
@@ -114,54 +171,22 @@ class _RatePageState extends State<RatePage> {
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 16, right: 16),
-                    child: Wrap(
-                      alignment: WrapAlignment.start,
-                      children: _getChipList(),
-                    ),
-                  ),
-                  Container(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: TextField(
-                        controller: textEditingController,
-                        decoration: InputDecoration(hintText: '내용을 입력하세요.'),
-                      ),
-                    ),
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          alignment: Alignment.center,
-                          padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16, top: 16),
-                          child: SmoothStarRating(
-                            allowHalfRating: true,
-                            onRatingChanged: (v) {
-                              setState(() {
 
-                              });
-                            },
-                            starCount: 5,
-                            rating: 0,
-                            size: 40.0,
-                            color: CustomAppTheme.buildLightTheme().primaryColor,
-                            borderColor: CustomAppTheme.buildLightTheme().primaryColor,
-                            spacing:0.0
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: FlatButton(
-                          child: Text("Rate!!", style: CustomAppTheme.dartGreyText,),
-                          textColor: Colors.blue,
-                          onPressed: (){},
-                        ),
-                      )
-                    ],
-                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: FlatButton(
+                      child: Text("Rate!!", style: CustomAppTheme.dartGreyText,),
+                      textColor: Colors.blue,
+                      onPressed: (){
+                        _rate().then((onValue){
+                          Navigator.of(context).pop();
+                          Navigator.push(context, 
+                            MaterialPageRoute(builder:  (context) => HitoryPage())
+                          );
+                        });
+                      },
+                    ),
+                  )
                 ],
               ),
             ),
@@ -172,18 +197,7 @@ class _RatePageState extends State<RatePage> {
   }
 
 
-  List<Widget> _getChipList() {
-    List<String> labels = ["편안함", "깨끗함", "친절함", "새로 만든", "아늑한", "새련된"];
-    List<Widget> result = [];
-
-    for (String label in labels) {
-      result.add( StatusFilterChip(label:label));
-    }
-
-    return result;
-  }
-
-  Widget _getPrefenceList() {
+  Widget _getPreferenceList() {
     return  DropdownButton<String>(
       items: [
         DropdownMenuItem<String>(
@@ -217,14 +231,59 @@ class _RatePageState extends State<RatePage> {
     );
   }
 
-}
+  Widget _getAccompanyList() {
+    return  DropdownButton<String>(
+      items: [
+        DropdownMenuItem<String>(
+          child: Text("혼자서"),
+          value: 'alone',
+        ),
+        DropdownMenuItem<String>(
+          child: Text("친구와 약속"),
+          value: 'friends',
+        ),
+        DropdownMenuItem<String>(
+          child: Text("비즈니스 때문에"),
+          value: 'Business'
+        ),
+        DropdownMenuItem<String>(
+          child: Text("가족들과의 모임"),
+          value: 'Faminy',
+        ),
+        DropdownMenuItem<String>(
+          child: Text("기타"),
+          value: 'etc',
+        ),
+      ],
+      onChanged: (value) {
+        setState(() {
+          this.withWho = value;
+        });
+      },
+      hint: Text('Select Item'),
+      value: this.withWho,
+    );
+  }
 
-
-
-
-
-enum CategoryType {
-  ui,
-  coding,
-  basic,
+  Future _rate() async {
+    var doc = Firestore.instance.collection('post').document();
+    await doc.setData({
+      'id':widget.result.resultItem[widget.itemIndex].id,
+      'userId':userStatus.uid,
+      'userEmail': userStatus.email,
+      'userDisplayName': userStatus.displayName,
+      'name':widget.result.resultItem[widget.itemIndex].name,
+      'address': widget.result.resultItem[widget.itemIndex].address,
+      'latitude': widget.result.resultItem[widget.itemIndex].latitude,
+      'longitude': widget.result.resultItem[widget.itemIndex].longitude,
+      'year': widget.result.msgMap["year"],
+      'month': widget.result.msgMap["month"],
+      'day': widget.result.msgMap["day"],
+      'hour': widget.result.msgMap["hour"],
+      'minute': widget.result.msgMap["minute"],
+      'currentTime': DateTime.now(),
+      'rating' : double.parse(this.preference),
+      'with' : this.withWho,
+    });
+  }
 }

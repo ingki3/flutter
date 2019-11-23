@@ -112,7 +112,7 @@ class _LoadingPageState extends State<LoadingPage> {
       List<BusinessResult> resultList = List();
 
       for(var item in itemList["results"]){
-//        print(item);
+        print(item);
         resultList.add(BusinessResult.fromJson(item));
         print(item["name"]);
         print(item["vicinity"]);
