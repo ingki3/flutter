@@ -1,6 +1,10 @@
+import 'dart:async';
+
+//import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:credit_card_sms_receiver/model/visitedBusinessListTileData.dart';
 import 'package:credit_card_sms_receiver/theme/custom_app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 //import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 //import 'package:smooth_star_rating/smooth_star_rating.dart';
 
@@ -32,13 +36,6 @@ class VisitedBusinessListTile extends StatelessWidget {
           children: <Widget>[
             Column(
               children: <Widget>[
-/*              AspectRatio(
-                  aspectRatio: 2,
-                  child: Image.asset(
-                    item.iconImagePath,
-                    fit: BoxFit.cover,
-                  ),
-                ), */
                 Container(
                   color: CustomAppTheme.buildLightTheme().backgroundColor,
                   child: Row(
@@ -54,7 +51,7 @@ class VisitedBusinessListTile extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Text(
-                                  item.titleTxt,
+                                  item.name,
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w600,
@@ -100,6 +97,20 @@ class VisitedBusinessListTile extends StatelessWidget {
                     ],
                   ),
                 ),
+                AspectRatio(
+                  aspectRatio: 2,
+                  child: GoogleMap(
+                    mapType: MapType.normal,
+                    initialCameraPosition: CameraPosition(
+                      target: LatLng(item.latitude, item.longitude),
+                      zoom: 16.0
+                    ),
+                    markers: _getMarkers(item),
+                    onMapCreated: (GoogleMapController controller) {
+                    Completer().complete(controller);
+                    },
+                  ),
+                ),
               ],
             ),
           ],
@@ -107,4 +118,22 @@ class VisitedBusinessListTile extends StatelessWidget {
       ),
     );
   }
+  Set<Marker> _getMarkers(VisitedBusinessListTileData item) {
+    Set<Marker> result = Set();
+
+    result.add(
+      Marker(
+        markerId: MarkerId(item.id),
+        position: LatLng(item.latitude, item.longitude),
+        infoWindow: InfoWindow(
+          title: item.name,
+          snippet: item.address,
+        ),
+        icon: BitmapDescriptor.defaultMarker,
+      )
+    );
+
+    return result;
+  }
 }
+

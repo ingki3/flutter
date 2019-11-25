@@ -48,7 +48,7 @@ Widget build(BuildContext context) {
               title:"History"
             ),
             Expanded(
-              child: SingleChildScrollView(child: getItemList())
+              child: getItemList()
             ),
           ],
         )
@@ -66,10 +66,16 @@ Widget build(BuildContext context) {
         if(!snapshot.hasData) {
           return const Text("No result");
         }
-
-
         var items = snapshot.data?.documents ?? [];
-        return getExpansionPanelList(items);
+
+        return ListView.builder(
+          itemCount: items.length,
+          itemBuilder: (context, index) {
+            return new VisitedBusinessListTile(
+              item: new VisitedBusinessListTileData(items[index])
+            );
+          },
+        );
       },
     );
   }
