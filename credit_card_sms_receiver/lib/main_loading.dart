@@ -46,7 +46,6 @@ class _LoadingPageState extends State<LoadingPage> {
   }
 
   Future readingMessage(String msg) async {
-//    Map<String, String> parseResult = _parseString(widget.msg);
   
     setState(() {
     _getPosition(widget.msg).then((position){
@@ -70,19 +69,16 @@ class _LoadingPageState extends State<LoadingPage> {
     }
 
     String cardName = splitedStr[1].substring(0, splitedStr[1].indexOf('('));
-    print("Card Name : $cardName");
     String spending = splitedStr[3].substring(0, splitedStr[3].indexOf('원'));
-    print("Spending : $spending");
-    String month = spending = splitedStr[4].substring(0, splitedStr[4].indexOf('/'));
-    String day = spending = splitedStr[4].substring(splitedStr[4].indexOf('/') + 1, splitedStr[4].indexOf(' '));
-    String hour = spending = splitedStr[4].substring(splitedStr[4].indexOf(' ') + 1, splitedStr[4].indexOf(':'));
-    String minute = spending = splitedStr[4].substring(splitedStr[4].indexOf(':') + 1, splitedStr[4].length);
-    print("$month/$day $hour:$minute");
+    String month = splitedStr[4].substring(0, splitedStr[4].indexOf('/'));
+    String day = splitedStr[4].substring(splitedStr[4].indexOf('/') + 1, splitedStr[4].indexOf(' '));
+    String hour = splitedStr[4].substring(splitedStr[4].indexOf(' ') + 1, splitedStr[4].indexOf(':'));
+    String minute = splitedStr[4].substring(splitedStr[4].indexOf(':') + 1, splitedStr[4].length);
     String business = splitedStr[5];
 
     Map<String, String> map = {
           "cardName" : "$cardName",
-          "spending" : "$spending",
+          "spending" : "$spending"+"원",
           "business" : "$business",
           "month" : "$month",
           "day" : "$day",
@@ -90,7 +86,6 @@ class _LoadingPageState extends State<LoadingPage> {
           "minute" : "$minute",
           "year" : (DateTime.now().year).toString(),
     };
-    print("Business : ${map["business"]}");
       
     return map;
   }
@@ -106,16 +101,12 @@ class _LoadingPageState extends State<LoadingPage> {
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
-      print("Mark 2-1 ***************************");
       var itemList = json.decode(response.body);
 
       List<BusinessResult> resultList = List();
 
       for(var item in itemList["results"]){
-        print(item);
         resultList.add(BusinessResult.fromJson(item));
-        print(item["name"]);
-        print(item["vicinity"]);
       }
 
       return SearchResult(parsedList, position.latitude, position.longitude, resultList);
@@ -126,6 +117,4 @@ class _LoadingPageState extends State<LoadingPage> {
       return null;
     }
   }
-
-
 }

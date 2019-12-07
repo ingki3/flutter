@@ -9,7 +9,7 @@ class VisitedBusinessListTileData {
   double dist;
   double rating;
   int reviews;
-  int perNight;
+  String perNight;
   double latitude;
   double longitude;
 
@@ -18,15 +18,14 @@ class VisitedBusinessListTileData {
     this.address = document['address'];
     this.iconImagePath = document['iconImagePath'];
     this.name = document['name'];
-    this.subTxt = document['currentTime'].toDate().toString();
+    this.subTxt = document['visitedTime'];
     this.dist = 1.8;
     this.reviews = 8;
     this.rating = document['rating'];
-    this.perNight = 180;
+    this.perNight = document['spending'];
     this.latitude = document["latitude"];
     this.longitude = document["longitude"];
   }
-
 
 /*
   static List<HotelListData> hotelList = [

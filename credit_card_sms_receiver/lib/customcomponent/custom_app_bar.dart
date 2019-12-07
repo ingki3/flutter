@@ -21,12 +21,13 @@ class _CustomAppBarState extends State<CustomAppBar> {
 
   Widget getAppBarUI() {
     return Container(
-      decoration: BoxDecoration(
+        color: Colors.yellow,
+/*      decoration: BoxDecoration(
         color: CustomAppTheme.buildLightTheme().backgroundColor,
         boxShadow: <BoxShadow>[
           BoxShadow(color: Colors.grey.withOpacity(0.2), offset: Offset(0, 2), blurRadius: 8.0),
-        ],
-      ),
+        ], 
+      ), */
       child: Padding(
         padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top, left: 8, right: 8),
         child: Row(
