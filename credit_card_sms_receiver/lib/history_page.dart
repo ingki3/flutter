@@ -1,4 +1,4 @@
-//import 'package:credit_card_sms_receiver/user_status.dart';
+import 'package:credit_card_sms_receiver/user_status.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -47,7 +47,7 @@ class _HitoryPageState extends State<HitoryPage> {
   Widget getItemList() {
     return StreamBuilder<QuerySnapshot>(
       stream: Firestore.instance.collection('post')
-//              .where("userId", isEqualTo: userStatus.uid)
+              .where("userId", isEqualTo: userStatus.uid)
               .orderBy('currentTime', descending: true)
               .snapshots(),
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {

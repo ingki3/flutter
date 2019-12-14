@@ -25,11 +25,13 @@ class _RatePageState extends State<RatePage> {
   final textEditingController = TextEditingController();
   String preference;
   String withWho;
+  String comment;
 
   @override
   void initState() {
     this.preference = '3';
     this.withWho = "alone";
+    this.comment = '내용을 입력하세요.';
     super.initState();
   }
 
@@ -160,7 +162,7 @@ class _RatePageState extends State<RatePage> {
                                   Container(
                                     child: TextField(
                                         controller: textEditingController,
-                                        decoration: InputDecoration(hintText: '내용을 입력하세요.'),
+                                        decoration: InputDecoration(hintText: this.comment),
                                       ),
                                   ),
                                 ],
@@ -196,7 +198,6 @@ class _RatePageState extends State<RatePage> {
     );
   }
 
-
   Widget _getPreferenceList() {
     return  DropdownButton<String>(
       items: [
@@ -224,6 +225,21 @@ class _RatePageState extends State<RatePage> {
       onChanged: (value) {
         setState(() {
           this.preference = value;
+          if (this.preference == '5' ) {
+            this.comment = "다른 사람들에게도 강력 추천!";
+          }
+          else if (this.preference == '4' ) {
+            this.comment = "다시 방문 할 의향 있음.";
+          }
+          else if (this.preference == '3' ) {
+            this.comment = "그럭 저럭 괜찮았음.";
+          }
+          else if (this.preference == '2' ) {
+            this.comment = "일부러 다시 올 생각은 없음.";
+          }
+          else {
+            this.comment = "완전 비추.";
+          }
         });
       },
       hint: Text('Select Item'),
@@ -244,11 +260,11 @@ class _RatePageState extends State<RatePage> {
         ),
         DropdownMenuItem<String>(
           child: Text("비즈니스 때문에"),
-          value: 'Business'
+          value: 'business'
         ),
         DropdownMenuItem<String>(
           child: Text("가족들과의 모임"),
-          value: 'Faminy',
+          value: 'family',
         ),
         DropdownMenuItem<String>(
           child: Text("기타"),
